@@ -7,6 +7,10 @@
     font-family: "Poppins", sans-serif;
 }
 
+::selection {
+    background-color: rgb(110, 55, 211)
+}
+
 body {
     min-height: 100vh;
 }
@@ -39,14 +43,14 @@ body {
 }
 
 .logo {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #fff;
     text-decoration: none;
     font-weight: 700;
 }
 
 .navbar a {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #fff;
     text-decoration: none;
     font-weight: 500;
@@ -76,25 +80,28 @@ body {
 
 .landingPage1 div {
     color: #fff;
-    transform: translate3d(1000%, 1000%);
-    margin: auto;
+    margin: 0rem;
     position: absolute;
-    min-width: auto;
+    min-width: 250px;
+    max-height: 400px;
+    scale: 1rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 1.3rem;
     border-radius: .5rem;
     border: .1px solid gray;
-
-    max-height: 400;
-
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(50px);
     -webkit-background-color: rgba(0, 0, 0, 0.2);
     -webkit-backdrop-filter: blur(50px);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: .3s ease-in-out;
+}
 
+.landingPage1 div:hover {
+    border: 1px solid white;
+    box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
 }
 
 .landingPage2 {
@@ -102,6 +109,21 @@ body {
     background: url('Assets/LandingPageBG1.jpg') no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.landingPage2 div {
+    color: #fff;
+
+
+    padding: 1.3rem;
+    border-radius: .5rem;
+    border: .1px solid gray;
+    max-height: 400;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(50px);
+    -webkit-background-color: rgba(0, 0, 0, 0.2);
+    -webkit-backdrop-filter: blur(50px);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 /* BREAKPOINTS */
