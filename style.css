@@ -179,9 +179,5 @@ button:hover {
         text-align: center;
         transform: translateY(-50);
     }
-
-    .lp1 div {
-        overflow: scroll;
-    }
 }
 
