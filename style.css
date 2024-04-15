@@ -71,7 +71,23 @@ body {
     display: none;
 }
 
-.landingPage1 {
+button {
+    cursor: pointer;
+    color: #fff;
+    background-color: #1c1c1c;
+    margin-top: .5rem;
+    border-radius: .5rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    border: .1px solid gray;
+    transition: .3s ease-in-out;
+}
+
+button:hover {
+    border: 1px solid white;
+}
+
+.lp1 {
     height: 100vh;
     background: url('Assets/LandingPageBG2.jpg') no-repeat;
     background-size: cover;
@@ -79,7 +95,7 @@ body {
     background-position: center;
 }
 
-.landingPage1 div {
+.lp1 .lp1-container {
     color: #fff;
     margin: 0rem;
     position: absolute;
@@ -100,46 +116,16 @@ body {
     transition: .3s ease-in-out;
 }
 
-.landingPage1 div:hover {
+.lp1 .lp1-container:hover {
     border: 1px solid white;
     box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
 }
 
-.landingPage1 div button {
-    color: #fff;
-    background-color: #1c1c1c;
-    margin-top: .5rem;
-    border-radius: .5rem;
-    padding: .5rem;
-    border-radius: .5rem;
-    border: .1px solid gray;
-    transition: .3s ease-in-out;
-}
-
-.landingPage1 div button:hover {
-    border: 1px solid white;
-}
-
-.landingPage2 {
+.lp2 {
     height: 100vh;
     background: url('Assets/LandingPageBG1.jpg') no-repeat;
     background-size: cover;
     background-position: center;
-}
-
-.landingPage2 div {
-    color: #fff;
-
-
-    padding: 1.3rem;
-    border-radius: .5rem;
-    border: .1px solid gray;
-    max-height: 400;
-    background-color: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(50px);
-    -webkit-background-color: rgba(0, 0, 0, 0.2);
-    -webkit-backdrop-filter: blur(50px);
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 /* BREAKPOINTS */
@@ -194,7 +180,7 @@ body {
         transform: translateY(-50);
     }
 
-    .landingPage1 div {
+    .lp1 div {
         overflow: scroll;
     }
 }
