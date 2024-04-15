@@ -9,9 +9,6 @@
 
 body {
     min-height: 100vh;
-    background: url('Assets/LandingPageBG.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 
 .header {
@@ -124,10 +121,33 @@ body {
 
 .landingPage1 {
     height: 100vh;
-    background: red;
+    background: url('Assets/LandingPageBG2.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.landingPage1 div {
+
+    transform: translate3d(1000%, 1000%);
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1.3rem;
+    border-radius: .5rem;
+
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(50px);
+    -webkit-background-color: rgba(0, 0, 0, 0.2);
+    -webkit-backdrop-filter: blur(50px);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .landingPage2 {
     height: 100vh;
-    background: blue;
+    background: url('Assets/LandingPageBG1.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
 }
