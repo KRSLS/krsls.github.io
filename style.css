@@ -121,3 +121,13 @@ body {
         transform: translateY(-50);
     }
 }
+
+.landingPage1 {
+    height: 100vh;
+    background: red;
+}
+
+.landingPage2 {
+    height: 100vh;
+    background: blue;
+}
