@@ -128,7 +128,7 @@ body {
 }
 
 .landingPage1 div {
-
+    color: #fff;
     transform: translate3d(1000%, 1000%);
     margin: auto;
     position: absolute;
