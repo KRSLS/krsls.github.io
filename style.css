@@ -56,6 +56,7 @@ body {
 }
 
 .navbar a {
+    cursor: pointer;
     font-size: 1.2rem;
     color: #fff;
     text-decoration: none;
@@ -167,6 +168,14 @@ button:hover {
 .lp2 .container img:hover {
     border: 1px solid white;
     box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+}
+
+.lp3 {
+    height: 100vh;
+    background: url('Assets/LandingPageBG3.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 /* BREAKPOINTS */
