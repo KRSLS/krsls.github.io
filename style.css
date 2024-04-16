@@ -9,7 +9,7 @@
 }
 
 ::selection {
-    background-color: rgb(110, 55, 211)
+    background-color: rgb(110, 55, 211);
 }
 
 body {
@@ -48,6 +48,11 @@ body {
     color: #fff;
     text-decoration: none;
     font-weight: 700;
+    transition: .3s ease-in-out;
+}
+
+.logo:hover {
+    color: rgb(110, 55, 211)
 }
 
 .navbar a {
@@ -56,6 +61,11 @@ body {
     text-decoration: none;
     font-weight: 500;
     margin-left: 2.5rem;
+    transition: .3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: #d6d6d6;
 }
 
 #check {
