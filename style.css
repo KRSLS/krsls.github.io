@@ -101,7 +101,6 @@ button:hover {
     position: absolute;
     min-width: 250px;
     max-height: 400px;
-    scale: 1rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -126,6 +125,25 @@ button:hover {
     background: url('Assets/LandingPageBG1.jpg') no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.lp2 .container {
+    color: #fff;
+    position: relative;
+    /* min-width: 250px;
+    max-height: 400px; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1.3rem;
+    border-radius: .5rem;
+    border: .1px solid gray;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(50px);
+    -webkit-background-color: rgba(0, 0, 0, 0.2);
+    -webkit-backdrop-filter: blur(50px);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: .3s ease-in-out;
 }
 
 /* BREAKPOINTS */
@@ -178,6 +196,10 @@ button:hover {
         margin: 1.5rem 0;
         text-align: center;
         transform: translateY(-50);
+    }
+
+    .lp1 .container {
+        overflow: scroll;
     }
 }
 
