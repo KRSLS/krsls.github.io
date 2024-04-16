@@ -98,9 +98,8 @@ button:hover {
 .lp1 .container {
     color: #fff;
     margin: 0rem;
-    position: absolute;
-    min-width: 250px;
-    max-height: 400px;
+    position: relative;
+    width: 80%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -130,8 +129,9 @@ button:hover {
 .lp2 .container {
     color: #fff;
     position: relative;
-    /* min-width: 250px;
-    max-height: 400px; */
+    min-width: 200px;
+    width: 80%;
+    max-height: 400px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -144,6 +144,13 @@ button:hover {
     -webkit-backdrop-filter: blur(50px);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transition: .3s ease-in-out;
+}
+
+.lp2 .container img {
+    width: 6rem;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    border: .1px solid gray;
 }
 
 /* BREAKPOINTS */
@@ -199,7 +206,14 @@ button:hover {
     }
 
     .lp1 .container {
+        max-height: 50%;
+        min-width: 200px;
+        overflow: scroll;
+    }
+
+    .lp2 .container {
+        max-height: 50%;
+        min-width: 200px;
         overflow: scroll;
     }
 }
-
