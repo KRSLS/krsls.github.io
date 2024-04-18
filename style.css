@@ -212,6 +212,10 @@ button:hover {
     transition: .3s ease-in-out;
 }
 
+.lp3 h2 {
+    margin-bottom: 0.5rem;
+}
+
 .lp3 form {
     display: flex;
     flex-direction: column;
