@@ -217,6 +217,8 @@ button:hover {
 }
 
 .lp3 input, textarea {
+    background-color: #1c1c1c;
+    color: #fff;
     padding: 0.5rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
