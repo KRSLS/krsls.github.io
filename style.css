@@ -86,7 +86,6 @@ button {
     cursor: pointer;
     color: #fff;
     background-color: #1c1c1c;
-    margin-top: .5rem;
     border-radius: .5rem;
     padding: .5rem;
     border-radius: .5rem;
@@ -100,13 +99,13 @@ button:hover {
 
 .lp1 {
     height: 100vh;
-    background: url('Assets/LandingPageBG2.jpg') no-repeat;
+    background: url('Assets/LandingPageBG3.jpg') no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
 }
 
-.lp1 .container {
+.lp1 .container-bio {
     color: #fff;
     margin: 0rem;
     position: relative;
@@ -125,23 +124,13 @@ button:hover {
     transition: .3s ease-in-out;
 }
 
-.lp2 .container a {
-    text-decoration: none;
-}
-
-.lp1 .container:hover {
+.lp1 .container-bio:hover {
     border: 1px solid white;
     box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
 }
 
-.lp2 {
-    height: 100vh;
-    background: url('Assets/LandingPageBG1.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.lp2 .container {
+.lp1 .container-latestproject {
+    display: none;
     color: #fff;
     position: relative;
     min-width: 200px;
@@ -161,25 +150,93 @@ button:hover {
     transition: .3s ease-in-out;
 }
 
-.lp2 .container img {
+.lp1 .container-bio p {
+    margin-bottom: 0.5rem;
+}
+
+.lp1 .container-latestproject p {
+    margin-bottom: 0.5rem;
+}
+
+.lp1 .container-latestproject img {
     width: 6rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
     border-radius: .5rem;
     border: .1px solid gray;
     transition: .3s ease-in-out;
 }
 
-.lp2 .container img:hover {
+.lp1 .container-latestproject img:hover {
     border: 1px solid white;
     box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
 }
 
+.lp1 a {
+    text-decoration: none;
+}
+
+.lp2 {
+    height: 100vh;
+    background: url('Assets/LandingPageBG2.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 .lp3 {
     height: 100vh;
-    background: url('Assets/LandingPageBG3.jpg') no-repeat;
+    background: url('Assets/LandingPageBG1.jpg') no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+}
+
+.lp3 .container {
+    color: #fff;
+    position: relative;
+    min-width: 200px;
+    width: 80%;
+    max-height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1.3rem;
+    border-radius: .5rem;
+    border: .1px solid gray;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(50px);
+    -webkit-background-color: rgba(0, 0, 0, 0.2);
+    -webkit-backdrop-filter: blur(50px);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: .3s ease-in-out;
+}
+
+.lp3 form {
+    display: flex;
+    flex-direction: column;
+}
+
+.lp3 input, textarea {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: .5rem;
+    border: .1px solid gray;
+    resize: none;
+}
+
+.lp3 textarea:focus, input:focus {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: .5rem;
+    border: .1px solid gray;
+    resize: none;
+    outline: none;
+}
+
+.lp3 button {
+    margin-top: 0.5rem;
 }
 
 /* BREAKPOINTS */
@@ -234,13 +291,19 @@ button:hover {
         transform: translateY(-50);
     }
 
-    .lp1 .container {
+    .lp1 .container-bio {
         max-height: 50%;
         min-width: 200px;
         overflow: scroll;
     }
 
-    .lp2 .container {
+    .lp1 .container-latestproject {
+        max-height: 50%;
+        min-width: 200px;
+        overflow: scroll;
+    }
+
+    .lp3 .container {
         max-height: 50%;
         min-width: 200px;
         overflow: scroll;
