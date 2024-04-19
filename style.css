@@ -136,7 +136,6 @@ button:hover {
     position: relative;
     min-width: 200px;
     width: 80%;
-    max-height: 400px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -197,7 +196,6 @@ button:hover {
     position: relative;
     min-width: 200px;
     width: 80%;
-    max-height: 400px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -299,21 +297,15 @@ button:hover {
     }
 
     .lp1 .container-bio {
-        max-height: 50%;
         min-width: 200px;
-        overflow: scroll;
     }
 
     .lp1 .container-latestproject {
-        max-height: 50%;
         min-width: 200px;
-        overflow: scroll;
     }
 
     .lp3 .container {
-        max-height: 50%;
         min-width: 200px;
-        overflow: scroll;
     }
 }
 
