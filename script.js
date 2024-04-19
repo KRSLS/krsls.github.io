@@ -17,3 +17,19 @@ function showLatestProject() {
 
     showBio = !showBio;
 }
+
+function sendEmail() {
+
+    preventDefaults();
+    
+    var subject = document.getElementById("emailSubject").value;
+    var body = document.getElementById("emailBody").value;
+
+    if (subject === '' || body === '') {
+        alert('f')
+    }
+    else if(subject != null && body != null){
+        window.location = 'mailto:ioanniskarasoulas@gmail.com?subject=' + subject + '&body=' + body;
+    }
+
+}
