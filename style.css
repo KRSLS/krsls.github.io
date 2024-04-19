@@ -106,7 +106,7 @@ button:hover {
     background-position: center;
 }
 
-.lp1 .container-bio {
+.container {
     color: #fff;
     margin: 0rem;
     position: relative;
@@ -125,40 +125,20 @@ button:hover {
     transition: .3s ease-in-out;
 }
 
-.lp1 .container-bio:hover {
+.container:hover {
     border: 1px solid white;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.lp1 .container-latestproject {
-    display: none;
-    color: #fff;
-    position: relative;
-    min-width: 200px;
-    width: 80%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 1.3rem;
-    border-radius: .5rem;
-    border: .1px solid gray;
-    background-color: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(50px);
-    -webkit-background-color: rgba(0, 0, 0, 0.2);
-    -webkit-backdrop-filter: blur(50px);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    transition: .3s ease-in-out;
-}
-
-.lp1 .container-bio p {
+.container p {
     margin-bottom: 0.5rem;
 }
 
-.lp1 .container-latestproject p {
+.container p {
     margin-bottom: 0.5rem;
 }
 
-.lp1 .container-latestproject img {
+.container img {
     width: 6rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -167,12 +147,12 @@ button:hover {
     transition: .3s ease-in-out;
 }
 
-.lp1 .container-latestproject img:hover {
+.container img:hover {
     border: 1px solid white;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.lp1 a {
+a {
     text-decoration: none;
 }
 
@@ -183,21 +163,20 @@ button:hover {
     background-position: center;
 }
 
-.lp3 {
-    height: 100vh;
-    background: url('Assets/LandingPageBG1.jpg') no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+.lp2 .buttonContainer {
+    margin-top: 0.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
 }
 
-.lp3 .container {
+.lp2 .buttonContainer div {
+    margin: auto;
     color: #fff;
     position: relative;
-    min-width: 200px;
-    width: 80%;
-    top: 50%;
-    left: 50%;
+    top: 500px;
+    height: 5px;
+    width: auto;
     transform: translate(-50%, -50%);
     padding: 1.3rem;
     border-radius: .5rem;
@@ -210,6 +189,15 @@ button:hover {
     transition: .3s ease-in-out;
 }
 
+.lp3 {
+    height: 100vh;
+    background: url('Assets/LandingPageBG1.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+
 .lp3 h2 {
     margin-bottom: 0.5rem;
 }
@@ -219,7 +207,8 @@ button:hover {
     flex-direction: column;
 }
 
-.lp3 input, textarea {
+.lp3 input,
+textarea {
     background-color: #1c1c1c;
     color: #fff;
     padding: 0.5rem;
@@ -230,7 +219,8 @@ button:hover {
     resize: none;
 }
 
-.lp3 textarea:focus, input:focus {
+.lp3 textarea:focus,
+input:focus {
     padding: 0.5rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
