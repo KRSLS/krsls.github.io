@@ -23,11 +23,21 @@ function sendEmail() {
     var body = document.getElementById("emailBody").value;
 
     if (subject === '' || body === '') {
-        alert('You need to enter a name & subject.')
+        // alert('You need to enter a name & subject.')
+        document.getElementById("emailError").style.display = "block";
+
+        //After 3 seconds run a function
+        //This function hides the error notification
+        setTimeout(closeNotification, 3000);
+
     }
     else if (subject != null && body != null) {
         window.location = 'mailto:ioanniskarasoulas@gmail.com?subject=' + subject + '&body=' + body;
     }
+}
+
+function closeNotification() {
+    document.getElementById("emailError").style.display = "none";
 }
 
 var projectIndex = 0;
@@ -49,17 +59,15 @@ function switchProject(where) {
         console.log('Switched to project ' + projectIndex);
 
         for (let index = 0; index < projects.length; index++) {
-            if(index === projectIndex)
-            {
+            if (index === projectIndex) {
                 projects[index].style.display = "block";
             }
-            else if(index !== projectIndex)
-            {
+            else if (index !== projectIndex) {
                 projects[index].style.display = "none";
             }
         }
     }
-    else if (where === -1){
+    else if (where === -1) {
         if (projectIndex > 0) {
             projectIndex--;
         }
@@ -68,12 +76,10 @@ function switchProject(where) {
         console.log('Switched to project ' + projectIndex);
 
         for (let index = 0; index < projects.length; index++) {
-            if(index === projectIndex)
-            {
+            if (index === projectIndex) {
                 projects[index].style.display = "block";
             }
-            else if(index !== projectIndex)
-            {
+            else if (index !== projectIndex) {
                 projects[index].style.display = "none";
             }
         }
