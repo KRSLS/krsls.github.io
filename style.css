@@ -27,7 +27,6 @@ footer {
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-
 }
 
 .header {
@@ -114,6 +113,18 @@ button:hover {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+.bio {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bio .prof {
+    margin: 1rem;
+    width: 15%;
+}
+
 .lp1 {
     height: 100vh;
     background: url('Assets/LandingPageBG3.jpg') no-repeat;
@@ -124,7 +135,6 @@ button:hover {
 
 .container {
     color: #fff;
-    margin: 0rem;
     position: relative;
     width: 80%;
     top: 50%;
@@ -304,6 +314,17 @@ input:focus {
 
     .lp3 .container {
         min-width: 200px;
+    }
+
+    .bio {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bio .prof {
+        height: 150px;
+        width: 150px;
     }
 }
 
