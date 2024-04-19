@@ -163,7 +163,7 @@ a {
     background-position: center;
 }
 
-.lp2 .buttonContainer {
+.buttonContainer {
     position: relative;
     display: flex;
     justify-content: space-between;
