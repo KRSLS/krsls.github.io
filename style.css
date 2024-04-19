@@ -164,9 +164,9 @@ a {
 }
 
 .lp2 .buttonContainer {
-    margin-top: 0.5rem;
     position: relative;
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
 }
 
