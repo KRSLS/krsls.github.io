@@ -11,7 +11,7 @@ function showLatestProject() {
         document.getElementById("latestproject").style.display = "block";
     }
     else if (!showBio) {
-        document.getElementById("bio").style.display = "block";
+        document.getElementById("bio").style.display = "flex";
         document.getElementById("latestproject").style.display = "none";
     }
 
