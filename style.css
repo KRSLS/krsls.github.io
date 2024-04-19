@@ -266,7 +266,7 @@ input:focus {
     }
 
     #check:checked~.navbar {
-        height: 11rem;
+        height: 10rem;
     }
 
     .navbar a {
