@@ -94,6 +94,7 @@ footer {
 button {
     cursor: pointer;
     color: #fff;
+    font-weight: 500;
     background-color: #1c1c1c;
     border-radius: .5rem;
     padding: .5rem;
