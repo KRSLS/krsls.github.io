@@ -22,11 +22,12 @@ footer {
     padding: 1.3rem;
     color: #fff;
     text-align: center;
-
+    border-top: 1px solid #fff;
     background: url('Assets/Footer.jpg') no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+
 }
 
 .header {
