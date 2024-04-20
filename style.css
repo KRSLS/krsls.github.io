@@ -170,6 +170,19 @@ button:hover {
     transition: .3s ease-in-out;
 }
 
+.projectNameDate {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.projectNameDate p {
+    margin: auto;
+    padding: auto;
+    margin-left: 1rem;
+    font-style: italic;
+}
+
 .container p {
     margin-bottom: 0.5rem;
 }
