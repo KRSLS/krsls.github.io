@@ -1,16 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Colors */
+
+:root {
+    --background: #fff;
+    --text: #fff;
+    --text-dark: #1c1c1c;
+    --primary: #7444c6;
+    --secondary: #d4c1f6;
+    --accent: #833ff6;
+
+    --shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    --shadow2: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+        rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Poppins", sans-serif;
     scroll-behavior: smooth;
 }
 
 ::selection {
-    background-color: rgb(110, 55, 211);
+    background-color: var(--accent);
 }
 
 body {
@@ -18,15 +34,10 @@ body {
 }
 
 footer {
-    background-color: #1c1c1c;
-    padding: 1.3rem;
-    color: #fff;
+    background-color: var(--secondary);
+    padding: 1rem;
+    color: var(--text-dark);
     text-align: center;
-    border-top: 1px solid #fff;
-    background: url('Assets/Footer.jpg') no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
 }
 
 .header {
@@ -34,53 +45,53 @@ footer {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1.3rem 10%;
+    padding: 1rem 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
     transition: 0.3s ease-in-out;
-    border-bottom: 1px solid #fff;
 }
 
 .header::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0);
     backdrop-filter: blur(50px);
     -webkit-background-color: rgba(0, 0, 0, 0.2);
     -webkit-backdrop-filter: blur(50px);
     z-index: -1;
+    border-bottom: 1px solid var(--primary);
 }
 
 .logo {
     font-size: 1.5rem;
-    color: #fff;
+    color: var(--text-dark);
     text-decoration: none;
     font-weight: 700;
-    transition: .3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .logo:hover {
-    color: rgb(110, 55, 211)
+    color: var(--primary);
 }
 
 .navbar a {
     cursor: pointer;
     font-size: 1.2rem;
-    color: #fff;
+    color: var(--text-dark);
     text-decoration: none;
     font-weight: 500;
     margin-left: 2.5rem;
-    transition: .3s ease-in-out;
+    transition: 0.3s ease;
 }
 
 .navbar a:hover {
-    color: #d6d6d6;
+    color: var(--primary);
 }
 
 #check {
@@ -91,44 +102,56 @@ footer {
     position: absolute;
     right: 5%;
     font-size: 2rem;
-    color: #fff;
+    color: var(--text-dark);
     cursor: pointer;
     display: none;
 }
 
-button {
+.primary-button {
+    position: relative;
+    top: 0;
     cursor: pointer;
-    color: #fff;
-    font-weight: 500;
-    background-color: #1c1c1c;
-    border-radius: .5rem;
-    margin-top: 0.5rem;
-    padding: .5rem;
-    border-radius: .5rem;
-    border: .1px solid gray;
-    transition: .3s ease-in-out;
+    margin: 0.5rem;
+    padding: 0.5rem 2rem;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 0.5rem;
+    display: inline-block;
+    font-size: 0.9rem;
+    z-index: 2;
+    transition: 0.3s ease;
 }
 
-button:hover {
-    border: 1px solid white;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+.primary-button:hover {
+    top: -2px;
+    transform: rotate(1.5deg);
+    box-shadow: var(--shadow2);
+}
+
+.secondary-button {
+    cursor: pointer;
+    padding: 0.5rem 2rem;
+    background-color: var(--secondary);
+    color: var(--text-dark);
+    border-radius: 0.5rem;
+    display: inline-block;
+    font-size: 0.9rem;
+    z-index: 2;
+    transition: 0.3s ease;
 }
 
 .notification {
     display: none;
-    z-index: 1;
-    padding: 1.3rem;
+    z-index: 3;
+    padding: 0.5rem 2rem;
     position: fixed;
-    color: #fff;
-    backdrop-filter: blur(50px);
-    -webkit-backdrop-filter: blur(50px);
-    background-color: rgba(221, 137, 80, 0.2);
+    color: var(--text);
+    background-color: var(--accent);
     bottom: 0;
     left: 50%;
     transform: translate(-50%, -30%);
-    border-radius: .5rem;
-    border: 1px solid #fff;
-    bottom: 0;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow2);
 }
 
 .bio {
@@ -141,64 +164,66 @@ button:hover {
 .bio .prof {
     margin: 1rem;
     border-radius: 50rem;
-    width: 15%;
+    min-width: 25%;
+    box-shadow: var(--shadow2);
 }
 
 .lp1 {
     height: 100vh;
-    background: url('Assets/LandingPageBG3.jpg') no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+    background-color: var(--background);
+    overflow: hidden;
+}
+
+.lp1BackgroundImage {
+    position: absolute;
+    top: 21%;
+    left: -11%;
+    transform: scale(0.5);
+}
+
+.lp2BackgroundImage {
+    position: absolute;
+    top: 120%;
+    right: -11%;
+    transform: scale(0.5);
+}
+
+.lp3BackgroundImage {
+    position: absolute;
+    top: 185%;
+    left: -13%;
+    transform: scale(0.5);
 }
 
 .container {
-    color: #fff;
+    text-align: center;
+    background-color: transparent;
+    color: var(--text-dark);
     position: relative;
-    width: 80%;
+    width: 70%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 1.3rem;
-    border-radius: .5rem;
-    border: 1px solid white;
-    background-color: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(50px);
-    -webkit-background-color: rgba(0, 0, 0, 0.2);
-    -webkit-backdrop-filter: blur(50px);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    transition: .3s ease-in-out;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow2);
+    transition: 0.3s ease-in-out;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
-.projectNameDate {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-}
-
-.projectNameDate p {
-    margin: auto;
-    padding: auto;
-    margin-left: 0.5rem;
+.container p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     font-style: italic;
 }
 
-.container p {
-    margin-bottom: 0.5rem;
-}
-
-.container p {
-    margin-bottom: 0.5rem;
-}
-
 .container img {
-    width: 6rem;
+    width: 20%;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    border-radius: 0.5rem;
-    border: 1px solid white;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    transition: .3s ease-in-out;
+    border-radius: 50%;
+    box-shadow: var(--shadow2);
 }
 
 a {
@@ -207,9 +232,8 @@ a {
 
 .lp2 {
     height: 100vh;
-    background: url('Assets/LandingPageBG2.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-color: var(--background);
+    overflow: hidden;
 }
 
 .buttonContainer {
@@ -228,24 +252,21 @@ a {
     width: auto;
     transform: translate(-50%, -50%);
     padding: 1.3rem;
-    border-radius: .5rem;
-    border: .1px solid gray;
+    border-radius: 0.5rem;
+    border: 0.1px solid gray;
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(50px);
     -webkit-background-color: rgba(0, 0, 0, 0.2);
     -webkit-backdrop-filter: blur(50px);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    transition: .3s ease-in-out;
+    box-shadow: var(--shadow2);
+    transition: 0.3s ease-in-out;
 }
 
 .lp3 {
     height: 100vh;
-    background: url('Assets/LandingPageBG1.jpg') no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+    background-color: var(--background);
+    overflow: hidden;
 }
-
 
 h2 {
     margin-bottom: 0.5rem;
@@ -258,14 +279,16 @@ h2 {
 
 .lp3 input,
 textarea {
-    background-color: #1c1c1c;
-    color: #fff;
+    background-color: var(--secondary);
+    color: var(--text-dark);
+    font-size: 1rem;
     padding: 0.5rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    border-radius: .5rem;
-    border: .1px solid gray;
+    border-radius: 0.5rem;
+    border: none;
     resize: none;
+    outline: none;
 }
 
 .lp3 textarea:focus,
@@ -273,20 +296,15 @@ input:focus {
     padding: 0.5rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    border-radius: .5rem;
-    border: 1px solid white;
+    border-radius: 0.5rem;
     resize: none;
     outline: none;
-}
-
-.lp3 button {
-    margin-top: 0.5rem;
 }
 
 /* BREAKPOINTS */
 @media (max-width: 992px) {
     .header {
-        padding: 1.3rem 5%;
+        padding: 1rem 5%;
         transition: 0.3s ease-in-out;
     }
 }
@@ -296,7 +314,7 @@ input:focus {
         display: inline-flex;
     }
 
-    #check:checked~.icons #menu-open-icon {
+    #check:checked ~ .icons #menu-open-icon {
         display: none;
     }
 
@@ -304,7 +322,7 @@ input:focus {
         display: none;
     }
 
-    #check:checked~.icons #menu-close-icon {
+    #check:checked ~ .icons #menu-close-icon {
         display: block;
     }
 
@@ -314,18 +332,17 @@ input:focus {
         left: 0;
         width: 100%;
         height: 0;
-        background-color: rgba(0, 0, 0, 0.2);
+        background-color: rgba(0, 0, 0, 0);
         backdrop-filter: blur(50px);
-        -webkit-background-color: rgba(0, 0, 0, 0.2);
+        -webkit-background-color: rgba(0, 0, 0, 0);
         -webkit-backdrop-filter: blur(50px);
         overflow: hidden;
         transition: 0.3s ease-in-out;
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid var(--primary);
     }
 
-    #check:checked~.navbar {
-        height: 10rem;
-        border-bottom: 1px solid #fff;
+    #check:checked ~ .navbar {
+        height: 11rem;
     }
 
     .navbar a {
@@ -355,8 +372,7 @@ input:focus {
     }
 
     .bio .prof {
-        height: 150px;
-        width: 150px;
+        width: 40%;
     }
 }
 
