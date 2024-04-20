@@ -11,9 +11,10 @@
     --secondary: #d4c1f6;
     --accent: #833ff6;
 
-    --shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    --shadow2: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    --shadow2: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+        rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+        rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    --shadow1: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
         rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
@@ -111,8 +112,7 @@ footer {
     position: relative;
     top: 0;
     cursor: pointer;
-    margin: 0.5rem;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem;
     background-color: var(--primary);
     color: white;
     border-radius: 0.5rem;
@@ -124,13 +124,14 @@ footer {
 
 .primary-button:hover {
     top: -2px;
+    background-color: var(--accent);
     transform: rotate(1.5deg);
     box-shadow: var(--shadow2);
 }
 
 .secondary-button {
+    padding: 0.5rem;
     cursor: pointer;
-    padding: 0.5rem 2rem;
     background-color: var(--secondary);
     color: var(--text-dark);
     border-radius: 0.5rem;
@@ -138,6 +139,11 @@ footer {
     font-size: 0.9rem;
     z-index: 2;
     transition: 0.3s ease;
+}
+
+.secondary-button:hover {
+    color: var(--text);
+    background-color: var(--primary);
 }
 
 .notification {
@@ -171,7 +177,6 @@ footer {
 .lp1 {
     height: 100vh;
     background-color: var(--background);
-    overflow: hidden;
 }
 
 .lp1BackgroundImage {
@@ -204,7 +209,7 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 3rem;
+    padding: 1rem;
     border-radius: 1rem;
     box-shadow: var(--shadow2);
     transition: 0.3s ease-in-out;
@@ -213,6 +218,12 @@ footer {
 }
 
 .container p {
+    text-align: left;
+    margin: 1rem;
+}
+
+.container .date {
+    text-align: center;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     font-style: italic;
@@ -233,11 +244,9 @@ a {
 .lp2 {
     height: 100vh;
     background-color: var(--background);
-    overflow: hidden;
 }
 
 .buttonContainer {
-    position: relative;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -265,7 +274,6 @@ a {
 .lp3 {
     height: 100vh;
     background-color: var(--background);
-    overflow: hidden;
 }
 
 h2 {
@@ -275,6 +283,7 @@ h2 {
 .lp3 form {
     display: flex;
     flex-direction: column;
+    text-align: left;
 }
 
 .lp3 input,
@@ -284,7 +293,7 @@ textarea {
     font-size: 1rem;
     padding: 0.5rem;
     margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     border-radius: 0.5rem;
     border: none;
     resize: none;
@@ -353,26 +362,34 @@ input:focus {
         transform: translateY(-50);
     }
 
-    .lp1 .container-bio {
-        min-width: 200px;
-    }
-
-    .lp1 .container-latestproject {
-        min-width: 200px;
-    }
-
-    .lp3 .container {
-        min-width: 200px;
-    }
-
     .bio {
         flex-direction: column;
-        justify-content: center;
         align-items: center;
     }
 
     .bio .prof {
         width: 40%;
+    }
+
+    .container {
+        max-height: 70%;
+        overflow: scroll;
+    }
+
+    .container img {
+        width: 40%;
+    }
+
+    .lp1BackgroundImage {
+        display: none;
+    }
+
+    .lp2BackgroundImage {
+        display: none;
+    }
+
+    .lp3BackgroundImage {
+        display: none;
     }
 }
 
