@@ -1,10 +1,14 @@
 function scrollToID(id) {
-    document.getElementById(id).scrollIntoView();
+	document.getElementById(id).scrollIntoView();
 }
 
-function navBarBorderOnScroll() {
-	if(document.getElementById("nav").style.top === '0px')
-	{
-		console.log('f');
+window.addEventListener("scroll", () => {
+	console.log(window.scrollY);
+
+	if (window.scrollY > 125) {
+		document.getElementById('navMobile').style.display = 'block';
 	}
-}
+	else if (window.scrollY < 125) {
+		document.getElementById('navMobile').style.display = 'none';
+	}
+});

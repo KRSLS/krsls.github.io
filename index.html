@@ -8,8 +8,16 @@
     <link rel="icon" type="image/x-icon" href="Assets/fav.ico">
 </head>
 
-<body onscroll="navBarBorderOnScroll()">
-    <nav>
+<body id="body">
+    <nav class="nav" id="nav">
+        <ul>
+            <li><a onclick="scrollToID('c1')">ABOUT</a></li>
+            <li><a onclick="scrollToID('latestProject')">PROJECTS</a></li>
+            <li><a onclick="scrollToID('c3')">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <nav class="navMobile" id="navMobile">
         <ul>
             <li><a onclick="scrollToID('c1')">ABOUT</a></li>
             <li><a onclick="scrollToID('latestProject')">PROJECTS</a></li>
