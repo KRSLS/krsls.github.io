@@ -14,7 +14,10 @@ window.addEventListener("scroll", () => {
 
 	var s = window.scrollY * 0.05;
 	console.log(s);
-	document.getElementById('kiipMobile').style.transform = "rotate("+s+"deg)";
+	if(s < 30)
+	{
+		document.getElementById('kiipMobile').style.transform = "rotate("+s+"deg)";
+	}
 });
 
 window.addEventListener('load', (event) => {
