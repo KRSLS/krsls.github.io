@@ -124,7 +124,7 @@ main {
 
 .btn:hover {
     background-color: #fff;
-    color: black;
+    color: #1c1c1c;
     box-shadow: var(--shadow);
 }
 
