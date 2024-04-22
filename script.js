@@ -12,3 +12,7 @@ window.addEventListener("scroll", () => {
 		document.getElementById('navMobile').style.display = 'none';
 	}
 });
+
+window.addEventListener('load', (event) => {
+	document.getElementById('navMobile').style.display = 'none';
+});
