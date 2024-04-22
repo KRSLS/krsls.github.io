@@ -37,6 +37,7 @@ a {
     padding: 0.5rem 2rem;
     color: #fff;
     backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
     z-index: 1;
 }
 
@@ -75,6 +76,7 @@ li a:hover {
     padding: 0.5rem 2rem;
     color: #fff;
     backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
     border-bottom: 1px solid #fff;
     z-index: 1;
     animation: navMobileIn .3s;
@@ -322,10 +324,12 @@ footer {
     .iBusinessMan {
         top: 50%;
         filter: blur(10px);
+        -webkit-filter: blur(10px);
     }
 
     .iJourney {
         filter: blur(10px);
+        -webkit-filter: blur(10px);
     }
 
     .c3 {
