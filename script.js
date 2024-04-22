@@ -3,7 +3,7 @@ function scrollToID(id) {
 }
 
 window.addEventListener("scroll", () => {
-	console.log(window.scrollY);
+	// console.log(window.scrollY);
 
 	if (window.scrollY > 125) {
 		document.getElementById('navMobile').style.display = 'block';
