@@ -3,157 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KRSLS</title>
     <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Re imagined</title>
+    <link rel="icon" type="image/x-icon" href="Assets/fav.ico">
 </head>
 
 <body>
-    <header class="header ">
-        <a href="#" class="logo animate__animated animate__backInDown">KRSLS</a>
+    <nav>
+        <ul>
+            <li><a onclick="scrollToID('c1')">ABOUT</a></li>
+            <li><a onclick="scrollToID('latestProject')">PROJECTS</a></li>
+            <li><a onclick="scrollToID('c3')">CONTACT</a></li>
+        </ul>
+    </nav>
 
-        <input type="checkbox" id="check">
-        <label for="check" class="icons">
-            <i class='bx bx-menu' id="menu-open-icon"></i>
-            <i class='bx bx-x' id="menu-close-icon"></i>
-        </label>
-
-        <nav class="navbar">
-            <a onclick="scrollToID('lp1')" class="animate__animated animate__fadeIn">Home</a>
-            <a onclick="scrollToID('lp2')" class="animate__animated animate__fadeIn">Projects</a>
-            <a onclick="scrollToID('lp3')" class="animate__animated animate__fadeIn">Contact</a>
-        </nav>
-    </header>
-
-    <div class="notification" id="emailError">
-        <h2>Warning</h2>
-        <p>You need to enter a name & subject.</p>
-    </div>
-
-    <div class="lp1" id="lp1">
-        <div class="container bio" id="bio">
-            <img class="prof" src="Assets/Prof.png">
+    <main>
+        <img class="iBusinessMan" src="Assets/Illustrations/businessman.svg">
+        <div class="container c1" id="c1">
             <div>
-                <h2>Ioannis Karasoulas</h2>
-                <p>Self taught developer & designer. Started from watching tutorials on YouTube <br>
-                    and now creating native multi platform cloud based apps.</p>
-                <p>Check my latest project made with Flutter & Firebase.</p>
-                <button onclick="showLatestProject()">Show me!</button>
+                <h3>Ioannis Karasoulas</h3>
+                <p><b>Self taught</b> developer & designer. Started from watching tutorials on YouTube and now creating
+                    <b>native
+                        multi platform cloud</b> based apps. Learning new technologies is my favorite thing!
+                </p>
+                <p class="italy">- The definition of insanity is doing the same thing over and over again and expecting
+                    different
+                    results.
+                </p>
+                <p>Check my latest project <b>KIIP</b> made with Flutter & Firebase.</p>
+                <a class="btn" onclick="scrollToID('latestProject')">KIIP</a>
             </div>
+            <img class="kiipMobile" src="Assets/Images/kiipMobile.png">
         </div>
-        <div class="container" id="latestproject" style="display: none;">
-            <div class="buttonContainer">
-                <button onclick="showLatestProject()">Back</button>
-                <button onclick="scrollToID('lp2')">Show More</button>
+        <img class="iJourney" src="Assets/Illustrations/journey.svg">
+        <div class="container c2 projectKIIP" id="latestProject">
+            <div>
+                <h3>KIIP</h3>
+                <p class="italy">- 2023</p>
+                <p>Simple <b>cloud based</b> note taking app made with love, Flutter and Firebase.</p>
+                <p>Featuring account creation, collections (notebooks), <b>Material You design and smooth
+                        animations</b>.</p>
+                <a class="btn" target="_blank"
+                    href="https://play.google.com/store/apps/details?id=com.codelined.kiip">Android</a>
+                <a class="btn" target="_blank" href="https://kiip-cc44e.web.app/">Web</a>
             </div>
-            <img
+            <img class="projectIcon"
                 src="https://play-lh.googleusercontent.com/HVJo9TmzInp3tzo4nI8Kl7Db8rqWE52CdJyK3J7sYQEIrCxA1Pn315jliQSR0BH0QAM=w240-h480-rw">
-            <div class="projectNameDate">
-                <h2>Off Limits</h2>
-                <p>Latest Project</p>
-            </div>
-            <p>Simple cloud based note taking app made with love, Flutter and Firebase.</p>
-            <p>Featuring account creation, collections (notebooks), Material You design and smooth animations.</p>
-            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.codelined.kiip">
-                <button>Android</button>
-            </a>
-            <a target="_blank" href="https://kiip-cc44e.web.app"><button>Web</button></a>
         </div>
-    </div>
-
-    <div class="lp2" id="lp2">
-        <div class="container" id="p1">
-            <div class="buttonContainer">
-                <button onclick="switchProject(-1)">Previous</button>
-                <button onclick="switchProject(1)">Next</button>
+        <div class="container c2 projectAManager">
+            <div>
+                <h3>AManager</h3>
+                <p class="italy">- 2022</p>
+                <p><b>Cloud based</b> account manager that provides a <b>clean & minimalistic</b> interface.</p>
+                <p>Helps you save and always remember your passwords. Featuring a bunch of <b>customization</b>. <b>Made
+                        with
+                        Flutter & Firebase</b>.</p>
+                <a class="btn" target="_blank"
+                    href="https://play.google.com/store/apps/details?id=com.highnd.amanager&hl=en&gl=US">Android</a>
+                <a class="btn" target="_blank" href="https://amanager-d70c6.web.app/">Web</a>
             </div>
-            <img
-                src="https://image.winudf.com/v2/image1/Y29tLmhpZ2huZC5vZmZsaW1pdHNfaWNvbl8xNTQ0OTMwMDg1XzAwMQ/icon.webp?w=106&fakeurl=1&type=.webp">
-            <div class="projectNameDate">
-                <h2>Off Limits</h2>
-                <p>2019</p>
-            </div>
-            <p>My first ever project, a game made with Unity. Clean 2D graphics with hyper casual gameplay.</p>
-            <p>Featuring simple tap mechanics, in-game shop and procedural map generation.</p>
-            <p>Sadly this game got removed from Play Store but you can find it at the link bellow.</p>
-            <a target="_blank" href="https://apkpure.com/off-limits/com.highnd.offlimits/download/4">
-                <button>Android</button>
-            </a>
-        </div>
-        <div class="container" style="display: none;" id="p2">
-            <div class="buttonContainer">
-                <button onclick="switchProject(-1)">Previous</button>
-                <button onclick="switchProject(1)">Next</button>
-            </div>
-            <img
-                src="https://image.winudf.com/v2/image1/Y29tLmhpZ2huZC5hc2ltZWxsaXNfaWNvbl8xNTcyMTcwNTg2XzA5NA/icon.webp?w=140&fakeurl=1&type=.webp">
-            <div class="projectNameDate">
-                <h2>Periodic Table(t)</h2>
-                <p>2019</p>
-            </div>
-            <p>In collab with the Union of Greek Chemists created this quiz type game.</p>
-            <p>A set of questions you need to answer in a limited time to win rewards, made with Unity.</p>
-            <a target="_blank" href="https://apkpure.com/periodic-table-t/com.highnd.asimellis">
-                <button>Android</button>
-            </a>
-        </div>
-        <div class="container" style="display: none;" id="p3">
-            <div class="buttonContainer">
-                <button onclick="switchProject(-1)">Previous</button>
-                <button onclick="switchProject(1)">Next</button>
-            </div>
-            <img
+            <img class="projectIcon"
                 src="https://play-lh.googleusercontent.com/pbbktMv9F9ScnW3Jm5GYCmqIifP5Qoyw7BER9B_0dMax_xqB-rFJUBz7DMusy527uxc=w240-h480-rw">
-            <div class="projectNameDate">
-                <h2>AManager</h2>
-                <p>2022</p>
-            </div>
-            <p>Cloud based account manager that provides a clean & minimalistic interface.</p>
-            <p>Helps you save and always remember your passwords. Featuring a bunch of customization.</p>
-            <p>Made with Flutter & Firebase.</p>
-            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.highnd.amanager">
-                <button>Android</button>
-            </a>
         </div>
-        <div class="container" style="display: none;" id="p4">
-            <div class="buttonContainer">
-                <button onclick="switchProject(-1)">Previous</button>
-                <button onclick="switchProject(1)">Next</button>
+        <div class="container c2 projectPeriodicTablet">
+            <div>
+                <h3>Periodic Table(t)</h3>
+                <p class="italy">- 2019</p>
+                <p><b>In collab with the Union of Greek Chemists</b> created this quiz type game.</p>
+                <p>A set of questions you need to answer in a limited time to win rewards, <b>made with Unity</b>.</p>
+                <a class="btn" target="_blank"
+                    href="https://apkpure.com/periodic-table-t/com.highnd.asimellis">Android</a>
             </div>
-            <img
-                src="https://play-lh.googleusercontent.com/HVJo9TmzInp3tzo4nI8Kl7Db8rqWE52CdJyK3J7sYQEIrCxA1Pn315jliQSR0BH0QAM=w240-h480-rw">
-            <div class="projectNameDate">
-                <h2>KIIP</h2>
-                <p>2023</p>
+            <img class="projectIcon"
+                src="https://image.winudf.com/v2/image1/Y29tLmhpZ2huZC5hc2ltZWxsaXNfaWNvbl8xNTcyMTcwNTg2XzA5NA/icon.webp?w=140&fakeurl=1&type=.webp">
+        </div>
+        <div class="container c2 projectOffLimits">
+            <div>
+                <h3>Off Limits</h3>
+                <p class="italy">- 2019</p>
+                <p>My <b>first ever project</b>, a game <b>made with Unity</b>. Clean 2D graphics with hyper casual
+                    gameplay.</p>
+                <p>Featuring simple tap mechanics, in-game shop and <b>procedural map generation</b>.</p>
+                <a class="btn" target="_blank"
+                    href="https://apkpure.com/off-limits/com.highnd.offlimits/download/4">Android</a>
             </div>
-            <p>Simple cloud based note taking app made with love, Flutter and Firebase.</p>
-            <p>Featuring account creation, collections (notebooks), Material You design and smooth animations.</p>
-            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.codelined.kiip">
-                <button>Android</button>
-            </a>
-            <a target="_blank" href="https://kiip-cc44e.web.app"><button>Web</button></a>
+            <img class="projectIcon"
+                src="https://image.winudf.com/v2/image1/Y29tLmhpZ2huZC5vZmZsaW1pdHNfaWNvbl8xNTQ0OTMwMDg1XzAwMQ/icon.webp?w=106&fakeurl=1&type=.webp">
         </div>
-    </div>
-
-    <div class="lp3" id="lp3">
-        <div class="container">
-            <h2>Get in contact with me</h2>
-            <form>
-                <label>Name</label>
-                <input type="text" id="emailSubject">
-                <label>Subject</label>
-                <textarea type="text" style="height: 150px" id="emailBody"></textarea>
-            </form>
-            <button onclick="sendEmail();">Submit</button>
+        <div class="container c3" id="c3">
+            <h3>Find me @</h3>
+            <a class="gitHubIcon" target="_blank" href="https://github.com/KRSLS"><img src="Assets/Logos/github-mark-white.svg"></a>
         </div>
-    </div>
+    </main>
 
-    <footer>
-        <p>Created by Karasoulas - 2024</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <footer>Created by Karasoulas - 2024</footer>
+    <script src="script.js" type="text/javascript"></script>
 </body>
 
 </html>
