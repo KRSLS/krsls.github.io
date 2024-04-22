@@ -332,6 +332,10 @@ footer {
         -webkit-filter: blur(10px);
     }
 
+    .projectIcon {
+        width: 8rem;
+    }
+
     .c3 {
         flex-direction: column;
     }
