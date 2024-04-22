@@ -7,7 +7,8 @@
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: "Popings", sans-serif;
+    /* font-family: "Popings", sans-serif; */
+    font-family: "Montserrat", sans-serif;
 }
 
 :root {
@@ -80,17 +81,6 @@ li a:hover {
     border-bottom: 1px solid #ffffff81;
     z-index: 1;
     animation: navMobileIn .3s;
-}
-
-@keyframes navMobileIn {
-    0% {
-        opacity: 0;
-
-    }
-
-    100% {
-        opacity: 1;
-    }
 }
 
 main {
@@ -224,6 +214,7 @@ main {
 .gitHubIcon {
     box-shadow: var(--shadow);
     transition: 0.3s ease;
+    animation: transitionIn 3s ease 1;
 }
 
 .gitHubIcon:hover {
@@ -251,6 +242,17 @@ main {
 
     100% {
         margin-top: 1rem;
+    }
+}
+
+@keyframes navMobileIn {
+    0% {
+        opacity: 0;
+
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 
