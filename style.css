@@ -322,7 +322,6 @@ footer {
     }
 
     .iBusinessMan {
-        top: 50%;
         filter: blur(10px);
         -webkit-filter: blur(10px);
     }
