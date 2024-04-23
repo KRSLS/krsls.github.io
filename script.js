@@ -1,25 +1,26 @@
 function scrollToID(id) {
-	document.getElementById(id).scrollIntoView();
+  document.getElementById(id).scrollIntoView();
 }
 
 window.addEventListener("scroll", () => {
-	// console.log(window.scrollY);
+  // console.log(window.scrollY);
 
-	if (window.scrollY > 125) {
-		document.getElementById('navMobile').style.display = 'block';
-	}
-	else if (window.scrollY < 125) {
-		document.getElementById('navMobile').style.display = 'none';
-	}
+  // if scroll is greater than then show fixed navbar
+  if (window.scrollY > 125) {
+    document.getElementById("navMobile").style.display = "block";
+  } else if (window.scrollY < 125) {
+    document.getElementById("navMobile").style.display = "none";
+  }
 
-	var s = window.scrollY * 0.05;
-	console.log(s);
-	if(s < 30)
-	{
-		document.getElementById('kiipMobile').style.transform = "rotate("+s+"deg)";
-	}
+  // save scroll value and adjust to smaller number
+  var scale = scrollY * 0.04;
+  // if scroll value is smaller than then rotate image
+  if (scale < 30) {
+    document.getElementById("kiipMobile").style.transform =
+      "rotate(" + scale + "deg)";
+  }
 });
 
-window.addEventListener('load', (event) => {
-	document.getElementById('navMobile').style.display = 'none';
+window.addEventListener("load", (event) => {
+  document.getElementById("navMobile").style.display = "none";
 });
