@@ -58,6 +58,7 @@ li {
 li a {
     cursor: pointer;
     font-size: 2rem;
+    font-weight: 500;
     transition: 0.3s ease;
 }
 
@@ -154,7 +155,7 @@ main {
     width: 13rem;
     top: 130px;
     left: -30px;
-    /* transition: 5s; */
+    transition: 0.05s;
     animation: transitionIn 1s ease 1;
     box-shadow: var(--shadow);
 }
@@ -269,12 +270,18 @@ footer {
     .container {
         max-width: 768px;
     }
+    .projectIcon {
+        width: 11rem;
+    }
 }
 
 /* md */
 @media (max-width: 768px) {
     .container {
         max-width: 640px;
+    }
+    .projectIcon {
+        width: 10rem;
     }
 }
 
@@ -303,6 +310,10 @@ footer {
         max-width: 100%;
         flex-direction: column-reverse;
         align-items: center;
+    }
+
+    .container h3 {
+        text-align: center;
     }
 
     .container div {
