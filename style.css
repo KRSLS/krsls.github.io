@@ -12,6 +12,7 @@
 }
 
 :root {
+    --primary: #2d3a7a;
     --shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
         rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
@@ -19,7 +20,7 @@
 body,
 html {
     position: relative;
-    background-color: #2d3a7a;
+    background-color: var(--primary);
     min-height: 100vh;
 }
 
@@ -126,6 +127,15 @@ main {
     font-size: 1.2rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+}
+
+.container .bg-t {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.2rem;
+    background-color: #fff;
+    color: var(--primary);
 }
 
 .container .btn {
@@ -318,16 +328,6 @@ footer {
 
     .container div {
         max-width: 100%;
-    }
-
-    .iBusinessMan {
-        filter: blur(10px);
-        -webkit-filter: blur(10px);
-    }
-
-    .iJourney {
-        filter: blur(10px);
-        -webkit-filter: blur(10px);
     }
 
     .projectIcon {
