@@ -148,36 +148,6 @@ main {
     box-shadow: var(--shadow);
 }
 
-.iBusinessMan {
-    position: absolute;
-    transform: scale(0.8);
-    top: 130px;
-    left: -30px;
-    opacity: 0.5;
-    transition: 1s;
-    animation: iBusinessManIdle 10s ease infinite;
-}
-
-.iJourney {
-    position: absolute;
-    transform: scale(0.8);
-    top: 1530px;
-    right: -30px;
-    opacity: 0.5;
-    transition: 1s;
-    animation: iBusinessManIdle 10s ease infinite;
-}
-
-.iJourney {
-    position: absolute;
-    transform: scale(0.8);
-    top: 1530px;
-    right: -30px;
-    opacity: 0.5;
-    transition: 1s;
-    animation: iBusinessManIdle 10s ease infinite;
-}
-
 .kiipMobile {
     object-fit: contain;
     margin: 1rem;
@@ -233,7 +203,7 @@ main {
     transform: scale(1.1);
 }
 
-@keyframes iBusinessManIdle {
+@keyframes idleRotate {
     0% {
         rotate: 0deg;
     }
