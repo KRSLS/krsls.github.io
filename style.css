@@ -12,7 +12,8 @@
 }
 
 :root {
-    --shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    --shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 body,
@@ -46,7 +47,6 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-
 }
 
 li {
@@ -80,7 +80,7 @@ li a:hover {
     -webkit-backdrop-filter: blur(40px);
     border-bottom: 1px solid #ffffff81;
     z-index: 1;
-    animation: navMobileIn .3s;
+    animation: navMobileIn 0.3s;
 }
 
 main {
@@ -168,13 +168,23 @@ main {
     animation: iBusinessManIdle 10s ease infinite;
 }
 
+.iJourney {
+    position: absolute;
+    transform: scale(0.8);
+    top: 1530px;
+    right: -30px;
+    opacity: 0.5;
+    transition: 1s;
+    animation: iBusinessManIdle 10s ease infinite;
+}
+
 .kiipMobile {
     object-fit: contain;
     margin: 1rem;
     width: 13rem;
     top: 130px;
     left: -30px;
-    transition: 1s;
+    /* transition: 5s; */
     animation: transitionIn 1s ease 1;
     box-shadow: var(--shadow);
 }
@@ -199,13 +209,15 @@ main {
     box-shadow: var(--shadow);
 }
 
-.projectKIIP {}
+.projectKIIP {
+}
 
 .projectAManager {
     flex-direction: row;
 }
 
-.projectPeriodicTablet {}
+.projectPeriodicTablet {
+}
 
 .projectOffLimits {
     flex-direction: row;
@@ -248,7 +260,6 @@ main {
 @keyframes navMobileIn {
     0% {
         opacity: 0;
-
     }
 
     100% {
@@ -317,7 +328,6 @@ footer {
     li a {
         font-size: 0.8rem;
     }
-
 
     .container {
         max-width: 100%;
