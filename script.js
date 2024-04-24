@@ -2,6 +2,44 @@ function scrollToID(id) {
   document.getElementById(id).scrollIntoView();
 }
 
+// opacity stuff
+var opacityCoff = 0.001;
+
+// scale stuff
+var scaleCoff = 0.8;
+
+// blur stuff
+var blurAmount = 0;
+var maxBlurAmount = 4;
+var minBlurAmount = 0;
+var blurCoff = 0.001;
+var blurDecreaseCoff = 150;
+
+// handle blur
+function handleBlur() {
+  // if the blur amount is above 0 then try to lower it
+  if (blurAmount > minBlurAmount) {
+    blurAmount -= blurDecreaseCoff;
+  }
+
+  // if the blur amount is minus - then reset it to 0
+  if (blurAmount < minBlurAmount) {
+    blurAmount = minBlurAmount;
+  }
+}
+
+// run code every 100ms
+setInterval(() => {
+  console.log('Blur value: ' + blurAmount);
+
+  // apply the style
+  document.getElementById("darkModeIcon").style.filter = "blur(" + blurAmount + "px)";
+
+  // look up for this :(
+  handleBlur();
+
+}, 100);
+
 function turnDarkMode() {
   // enable dark-mode css at the body
   document.body.classList.toggle("bright-mode");;
@@ -11,7 +49,11 @@ window.addEventListener("scroll", () => {
   // console.log(window.scrollY);
 
   // animated dark mode icon with scroll position ;)
-  document.getElementById("darkModeIcon").style.transform = "rotate(" + scrollY * 0.8 + "deg)";
+  document.getElementById("darkModeIcon").style.transform = "rotate(" + scrollY * scaleCoff + "deg)";
+  // add blur as long as the blur value is lower than 4
+  if (blurAmount < maxBlurAmount) {
+    blurAmount += scrollY * blurCoff;
+  }
 
   // if scroll is greater than then show fixed navbar
   if (window.scrollY > 125) {
@@ -34,7 +76,7 @@ window.addEventListener("scroll", () => {
 
   // as we scroll then lower the opacity to document
   var opacity = 1;
-  opacity -= scrollY * 0.001;
+  opacity -= scrollY * opacityCoff1;
   // dont allow the opacity to me more than 1 and less than 0
   if (opacity > 1) {
     opacity = 1;

@@ -53,8 +53,8 @@ body {
     display: flex;
     justify-content: center;
 
-    backdrop-filter: blur(120px);
-    -webkit-backdrop-filter: blur(120px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     border: 0.5px solid rgba(255, 255, 255, 0.2);
@@ -508,12 +508,12 @@ footer {
         width: 10rem;
     }
 
-    .dark-mode-btn {
+    /* .dark-mode-btn {
         cursor: pointer;
         position: fixed;
         height: 3.5rem;
         width: 3.5rem;
-    }
+    } */
 }
 
 /* sm */
@@ -526,12 +526,12 @@ footer {
         max-width: 475px;
     }
 
-    .dark-mode-btn {
+    /* .dark-mode-btn {
         cursor: pointer;
         position: fixed;
         height: 3rem;
         width: 3rem;
-    }
+    } */
 }
 
 /* xs */
@@ -566,10 +566,10 @@ footer {
         flex-direction: column;
     }
 
-    .dark-mode-btn {
+    /* .dark-mode-btn {
         cursor: pointer;
         position: fixed;
         height: 2.5rem;
         width: 2.5rem;
-    }
+    } */
 }
