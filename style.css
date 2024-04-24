@@ -236,6 +236,7 @@ main {
     top: 130px;
     left: -30px;
     border-radius: 50%;
+    border: 3px solid white;
     transition: 1s;
     animation: transitionIn 2s ease 1;
     box-shadow: var(--shadow);
