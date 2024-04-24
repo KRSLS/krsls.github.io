@@ -174,9 +174,10 @@ main {
     font-size: 1.2rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    padding: 0.2rem;
+    padding: 0.4rem;
     background-color: #fff;
     color: #1c1c1c;
+    border-radius: 10px;
 }
 
 .container .btn {
