@@ -10,6 +10,7 @@ function turnDarkMode() {
 window.addEventListener("scroll", () => {
   // console.log(window.scrollY);
 
+  // animated dark mode icon with scroll position ;)
   document.getElementById("darkModeIcon").style.transform = "rotate(" + scrollY * 0.8 + "deg)";
 
   // if scroll is greater than then show fixed navbar
