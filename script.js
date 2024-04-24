@@ -5,6 +5,8 @@ function scrollToID(id) {
 function turnDarkMode() {
   var body = document.body;
   body.classList.toggle("dark-mode");
+
+  document.getElementById("kiipGlow").classList.toggle("kiipGlowDark");
 }
 
 window.addEventListener("scroll", () => {
@@ -27,8 +29,6 @@ window.addEventListener("scroll", () => {
   if (rotValue < 30) {
     // change the rotation of the document
     document.getElementById("kiipMobile").style.transform =
-      "rotate(" + rotValue + "deg)";
-    document.getElementById("kiipGlow").style.transform =
       "rotate(" + rotValue + "deg)";
   }
 

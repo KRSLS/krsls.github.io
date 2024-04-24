@@ -12,7 +12,7 @@
 }
 
 :root {
-    --primary: #2d3a7a;
+    --primary: #ca214c;
     --background-dark: #000000;
     --shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
         rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
@@ -199,6 +199,10 @@ main {
     box-shadow: var(--shadow);
 }
 
+.kiipGlowContainer {
+    overflow: visible;
+}
+
 .kiipMobile {
     object-fit: contain;
     margin: 1rem;
@@ -213,9 +217,20 @@ main {
 .kiipGlow {
     position: absolute;
     height: 400px;
-    width: 200px;
+    width: 300px;
     top: 200px;
     background-color: rgb(0, 247, 255);
+    filter: blur(50px);
+    -webkit-filter: blur(50px);
+    z-index: -1;
+}
+
+.kiipGlowDark {
+    position: absolute;
+    height: 400px;
+    width: 300px;
+    top: 200px;
+    background-color: var(--primary);
     filter: blur(50px);
     -webkit-filter: blur(50px);
     z-index: -1;
