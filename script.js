@@ -24,6 +24,8 @@ window.addEventListener("scroll", () => {
     // change the rotation of the document
     document.getElementById("kiipMobile").style.transform =
       "rotate(" + scale + "deg)";
+    document.getElementById("kiipGlow").style.transform =
+      "rotate(" + scale + "deg)";
   }
 
   // as we scroll then lower the opacity to document
@@ -38,6 +40,7 @@ window.addEventListener("scroll", () => {
   }
   // change the opacity of document
   document.getElementById("kiipMobile").style.opacity = opacity;
+  document.getElementById("kiipGlow").style.opacity = opacity;
 });
 
 window.addEventListener("load", (event) => {
