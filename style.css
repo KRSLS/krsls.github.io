@@ -217,6 +217,7 @@ main {
     top: 200px;
     background-color: rgb(0, 247, 255);
     filter: blur(50px);
+    -webkit-filter: blur(50px);
     z-index: -1;
 }
 
