@@ -4,7 +4,7 @@ function scrollToID(id) {
 
 function turnDarkMode() {
   // enable dark-mode css at the body
-  document.body.classList.toggle("dark-mode");;
+  document.body.classList.toggle("bright-mode");;
 }
 
 window.addEventListener("scroll", () => {
