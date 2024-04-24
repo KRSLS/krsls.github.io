@@ -3,10 +3,9 @@ function scrollToID(id) {
 }
 
 function turnDarkMode() {
+  // enable dark-mode css at the body
   var body = document.body;
   body.classList.toggle("dark-mode");
-
-  document.getElementById("kiipGlow").classList.toggle("kiipGlowDark");
 }
 
 window.addEventListener("scroll", () => {
@@ -22,8 +21,7 @@ window.addEventListener("scroll", () => {
   // save scroll value and adjust to smaller number
   var rotValue = scrollY * 0.04;
   // if scroll value is smaller than then rotate image
-  if(rotValue < 0)
-  {
+  if (rotValue < 0) {
     rotValue = 0;
   }
   if (rotValue < 30) {

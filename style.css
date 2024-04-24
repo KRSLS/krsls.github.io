@@ -13,7 +13,7 @@
 
 :root {
     --primary: #2d3a7a;
-    --background-dark: rgb(0,0,0);
+    --background-dark: rgb(0, 0, 0);
     --shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
         rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
@@ -25,6 +25,8 @@ html {
     min-height: 100vh;
     min-height: -webkit-fill-available;
     transition: 0.5s;
+
+    
 }
 
 body {
@@ -57,12 +59,12 @@ body {
 }
 
 .dark-mode-btn .darkModeIcon {
-    padding: 0.4rem;
-    transition: .5s ease;
+    padding: 0.7rem;
+    transition: .7s ease;
 }
 
 .dark-mode-btn:hover .darkModeIcon {
-    transform: rotate(180deg);
+    transform: rotate(120deg);
 }
 
 a {
@@ -80,8 +82,6 @@ a {
     justify-content: center;
     padding: 0.5rem 2rem;
     color: #fff;
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
     z-index: 1;
 }
 
@@ -119,8 +119,8 @@ li a:hover {
     display: flex;
     padding: 0.5rem 2rem;
     color: #fff;
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid #ffffff81;
     z-index: 1;
     animation: navMobileIn 0.3s;
