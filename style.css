@@ -18,6 +18,11 @@
         rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
+::selection {
+    color: black;
+    background-color: white;
+}
+
 body,
 html {
     -webkit-user-drag: false;
