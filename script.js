@@ -18,14 +18,18 @@ window.addEventListener("scroll", () => {
   }
 
   // save scroll value and adjust to smaller number
-  var scale = scrollY * 0.04;
+  var rotValue = scrollY * 0.04;
   // if scroll value is smaller than then rotate image
-  if (scale < 30) {
+  if(rotValue < 0)
+  {
+    rotValue = 0;
+  }
+  if (rotValue < 30) {
     // change the rotation of the document
     document.getElementById("kiipMobile").style.transform =
-      "rotate(" + scale + "deg)";
+      "rotate(" + rotValue + "deg)";
     document.getElementById("kiipGlow").style.transform =
-      "rotate(" + scale + "deg)";
+      "rotate(" + rotValue + "deg)";
   }
 
   // as we scroll then lower the opacity to document
