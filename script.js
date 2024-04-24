@@ -2,6 +2,11 @@ function scrollToID(id) {
   document.getElementById(id).scrollIntoView();
 }
 
+function turnDarkMode() {
+  var body = document.body;
+  body.classList.toggle("dark-mode");
+}
+
 window.addEventListener("scroll", () => {
   // console.log(window.scrollY);
 
