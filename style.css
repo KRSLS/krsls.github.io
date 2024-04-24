@@ -12,14 +12,15 @@
 }
 
 :root {
-    --primary: #ca214c;
-    --background-dark: #000000;
+    --primary: #2d3a7a;
+    --background-dark: rgb(0,0,0);
     --shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
         rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 body,
 html {
+    -webkit-user-drag: false;
     position: relative;
     min-height: 100vh;
     min-height: -webkit-fill-available;
@@ -212,28 +213,6 @@ main {
     transition: 0.05s;
     animation: transitionIn 1s ease 1;
     box-shadow: var(--shadow);
-}
-
-.kiipGlow {
-    position: absolute;
-    height: 400px;
-    width: 300px;
-    top: 200px;
-    background-color: rgb(0, 247, 255);
-    filter: blur(50px);
-    -webkit-filter: blur(50px);
-    z-index: -1;
-}
-
-.kiipGlowDark {
-    position: absolute;
-    height: 400px;
-    width: 300px;
-    top: 200px;
-    background-color: var(--primary);
-    filter: blur(50px);
-    -webkit-filter: blur(50px);
-    z-index: -1;
 }
 
 .c2 {

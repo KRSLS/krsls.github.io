@@ -44,7 +44,6 @@ window.addEventListener("scroll", () => {
   }
   // change the opacity of document
   document.getElementById("kiipMobile").style.opacity = opacity;
-  document.getElementById("kiipGlow").style.opacity = opacity;
 });
 
 window.addEventListener("load", (event) => {
