@@ -10,6 +10,8 @@ function turnDarkMode() {
 window.addEventListener("scroll", () => {
   // console.log(window.scrollY);
 
+  document.getElementById("darkModeIcon").style.transform = "rotate(" + scrollY * 0.8 + "deg)";
+
   // if scroll is greater than then show fixed navbar
   if (window.scrollY > 125) {
     document.getElementById("navMobile").style.display = "block";
