@@ -16,9 +16,23 @@ window.addEventListener("scroll", () => {
   var scale = scrollY * 0.04;
   // if scroll value is smaller than then rotate image
   if (scale < 30) {
+    // change the rotation of the document
     document.getElementById("kiipMobile").style.transform =
       "rotate(" + scale + "deg)";
   }
+
+  // as we scroll then lower the opacity to document
+  var opacity = 1;
+  opacity -= scrollY * 0.001;
+  // dont allow the opacity to me more than 1 and less than 0
+  if (opacity > 1) {
+    opacity = 1;
+  }
+  else if (opacity < 0) {
+    opacity = 0;
+  }
+  // change the opacity of document
+  document.getElementById("kiipMobile").style.opacity = opacity;
 });
 
 window.addEventListener("load", (event) => {
