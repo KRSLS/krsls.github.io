@@ -76,7 +76,7 @@ window.addEventListener("scroll", () => {
 
   // as we scroll then lower the opacity to document
   var opacity = 1;
-  opacity -= scrollY * opacityCoff1;
+  opacity -= scrollY * opacityCoff;
   // dont allow the opacity to me more than 1 and less than 0
   if (opacity > 1) {
     opacity = 1;
