@@ -229,6 +229,10 @@ main {
     flex-direction: row-reverse;
 }
 
+.c3 {
+    flex-direction: column;
+}
+
 .date {
     font-style: italic;
 }
@@ -461,7 +465,6 @@ main {
 footer {
     text-align: center;
     padding: 1rem;
-    font-weight: 600;
     color: #fff;
     background-color: #ffffff2c;
 }
