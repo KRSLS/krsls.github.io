@@ -88,6 +88,28 @@ window.addEventListener("scroll", () => {
   document.getElementById("kiipMobile").style.opacity = opacity;
 });
 
-window.addEventListener("load", (event) => {
+window.addEventListener("load", () => {
   document.getElementById("navMobile").style.display = "none";
+
+
+
+
+  // get current date and save it
+  var currentDate = new Date();
+
+  // raw format of the date
+  var dayRaw = currentDate.getDay();
+  var dateRaw = currentDate.getDate();
+  var monthRaw = currentDate.getMonth();
+  var yearRaw = currentDate.getUTCFullYear();
+  const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+  var dateString = `${days[dayRaw]}, ${dateRaw} of ${month[monthRaw]}`;
+
+  var dateDoc = document.getElementById('d');
+  dateDoc.innerHTML = dateString;
+
+  // set footers year
+  document.getElementById('footerYear').innerHTML = `Created by Karasoulas - ${yearRaw}`;
 });
