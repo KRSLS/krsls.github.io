@@ -30,26 +30,27 @@ function handleBlur() {
 
 // run code every 100ms
 setInterval(() => {
-  console.log('Blur value: ' + blurAmount);
+  console.log("Blur value: " + blurAmount);
 
   // apply the style
-  document.getElementById("darkModeIcon").style.filter = "blur(" + blurAmount + "px)";
+  document.getElementById("darkModeIcon").style.filter =
+    "blur(" + blurAmount + "px)";
 
   // look up for this :(
   handleBlur();
-
 }, 100);
 
 function turnDarkMode() {
   // enable dark-mode css at the body
-  document.body.classList.toggle("bright-mode");;
+  document.body.classList.toggle("bright-mode");
 }
 
 window.addEventListener("scroll", () => {
   // console.log(window.scrollY);
 
   // animated dark mode icon with scroll position ;)
-  document.getElementById("darkModeIcon").style.transform = "rotate(" + scrollY * scaleCoff + "deg)";
+  document.getElementById("darkModeIcon").style.transform =
+    "rotate(" + scrollY * scaleCoff + "deg)";
   // add blur as long as the blur value is lower than 4
   if (blurAmount < maxBlurAmount) {
     blurAmount += scrollY * blurCoff;
@@ -80,8 +81,7 @@ window.addEventListener("scroll", () => {
   // dont allow the opacity to me more than 1 and less than 0
   if (opacity > 1) {
     opacity = 1;
-  }
-  else if (opacity < 0) {
+  } else if (opacity < 0) {
     opacity = 0;
   }
   // change the opacity of document
@@ -91,9 +91,6 @@ window.addEventListener("scroll", () => {
 window.addEventListener("load", () => {
   document.getElementById("navMobile").style.display = "none";
 
-
-
-
   // get current date and save it
   var currentDate = new Date();
 
@@ -102,14 +99,36 @@ window.addEventListener("load", () => {
   var dateRaw = currentDate.getDate();
   var monthRaw = currentDate.getMonth();
   var yearRaw = currentDate.getUTCFullYear();
-  const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const month = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  var days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
 
   var dateString = `${days[dayRaw]}, ${dateRaw} of ${month[monthRaw]}`;
 
-  var dateDoc = document.getElementById('d');
+  var dateDoc = document.getElementById("d");
   dateDoc.innerHTML = dateString;
 
   // set footers year
-  document.getElementById('footerYear').innerHTML = `Created by Karasoulas - ${yearRaw}`;
+  document.getElementById("footerYear").innerHTML =
+    `Created by Karasoulas - ${yearRaw}`;
 });
