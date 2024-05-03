@@ -130,5 +130,5 @@ window.addEventListener("load", () => {
 
   // set footers year
   document.getElementById("footerYear").innerHTML =
-    `Created by Karasoulas - ${yearRaw}`;
+    `Copyright © KRSLS - ${yearRaw}`;
 });
