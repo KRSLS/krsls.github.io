@@ -193,6 +193,11 @@ main {
     margin-bottom: 0.5rem;
 }
 
+.container img {
+    border-radius: 10px;
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+}
+
 .container .bg-t {
     font-size: 1.1rem;
     margin-top: 0.5rem;
@@ -246,6 +251,7 @@ main {
 
 .container video {
     border-radius: 10px;
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
 }
 
 .divider {
