@@ -235,6 +235,10 @@ main {
     box-shadow: var(--shadow);
 }
 
+.sectionname {
+    width: 80%;
+}
+
 .sectionName h3{
     font-size: 1.2rem;
     font-weight: 500;
