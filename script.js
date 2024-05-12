@@ -10,7 +10,7 @@ var scaleCoff = 0.8;
 
 // blur stuff
 var blurAmount = 0;
-var maxBlurAmount = 2;
+var maxBlurAmount = 1;
 var minBlurAmount = 0;
 var blurCoff = 0.001;
 var blurDecreaseCoff = 150;

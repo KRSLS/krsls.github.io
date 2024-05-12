@@ -78,7 +78,7 @@ body {
 
 .dark-mode-btn .darkModeIcon {
     padding: 0.7rem;
-    transition: .7s ease;
+    transition: .2s ease;
 }
 
 .dark-mode-btn:hover .darkModeIcon {
