@@ -55,15 +55,16 @@
                     results.
                 </p>
                 <p class="bg-t">Check my latest project <b>KIIP</b> made with Flutter & Firebase.</p>
-                <a class="btn" onclick="scrollToID('latestProject')">KIIP</a>
+                <a class="btn" onclick="seeKiip()">KIIP</a>
             </div>
             <img class="kiipMobile" id="kiipMobile" src="Assets/Images/kiipMobile.png">
         </div>
+        <div class="ancorProjects" id="ancorProjects"></div>
         <!-- Projects -->
-        <div class="sectionName container" id="ancorProjects">
+        <div class="sectionName container" onclick="openDesigns()" id="sectionDesign">
             <h3>Designs</h3>
         </div>
-        <div class="container projectDynamicLandingPage" id="">
+        <div class="design container projectDynamicLandingPage" id="c1">
             <div>
                 <h3>Dynamic Landing Page</h3>
                 <p class="italy">- 2024</p>
@@ -74,7 +75,7 @@
             </div>
             <video autoplay loop playinline muted class="projectIcon" src="Assets/Videos/DynamicLandingPreview.mp4">
         </div>
-        <div class="container   projectParallaxLandingPage" id="">
+        <div class="design container projectParallaxLandingPage" id="">
             <div>
                 <h3>Parallax Landing Page</h3>
                 <p class="italy">- 2024</p>
@@ -85,10 +86,10 @@
             </div>
             <video autoplay loop playinline muted class="projectIcon" src="Assets/Videos/ParallaxPreview.mp4">
         </div>
-        <div class="sectionName container">
+        <div class="sectionName container" onclick="openProjects()" id="sectionProject">
             <h3>Apps</h3>
         </div>
-        <div class="container  projectKIIP" id="latestProject">
+        <div class="project container projectKIIP" id="latestProject">
             <div>
                 <h3>KIIP</h3>
                 <p class="italy">- 2023</p>
@@ -99,10 +100,9 @@
                     href="https://play.google.com/store/apps/details?id=com.codelined.kiip">Android</a>
                 <a class="btn" target="_blank" href="https://kiip-cc44e.web.app/">Web</a>
             </div>
-            <img class="projectIcon"
-                src="Assets/Icons/Kiip.webp">
+            <img class="projectIcon" src="Assets/Icons/Kiip.webp">
         </div>
-        <div class="container  projectAManager">
+        <div class="project container  projectAManager">
             <div>
                 <h3>AManager</h3>
                 <p class="italy">- 2022</p>
@@ -114,10 +114,9 @@
                     href="https://play.google.com/store/apps/details?id=com.highnd.amanager&hl=en&gl=US">Android</a>
                 <a class="btn" target="_blank" href="https://amanager-d70c6.web.app/">Web</a>
             </div>
-            <img class="projectIcon"
-                src="Assets/Icons/AManager.webp">
+            <img class="projectIcon" src="Assets/Icons/AManager.webp">
         </div>
-        <div class="container  projectPeriodicTablet">
+        <div class="project container  projectPeriodicTablet">
             <div>
                 <h3>Periodic Table(t)</h3>
                 <p class="italy">- 2019</p>
@@ -126,10 +125,9 @@
                 <a class="btn" target="_blank"
                     href="https://apkpure.com/periodic-table-t/com.highnd.asimellis">Android</a>
             </div>
-            <img class="projectIcon"
-                src="Assets/Icons/PedioticTable(t).png-160webp">
+            <img class="projectIcon" src="Assets/Icons/PedioticTable(t).png-160webp">
         </div>
-        <div class="container projectOffLimits">
+        <div class="project container projectOffLimits">
             <div>
                 <h3>Off Limits</h3>
                 <p class="italy">- 2019</p>
@@ -139,16 +137,16 @@
                 <a class="btn" target="_blank"
                     href="https://apkpure.com/off-limits/com.highnd.offlimits/download/4">Android</a>
             </div>
-            <img class="projectIcon"
-                src="Assets/Icons/OffLimits.webp">
+            <img class="projectIcon" src="Assets/Icons/OffLimits.webp">
         </div>
         <div class="container " id="c3">
             <h3>Work together?</h3>
             <a href="mailto:ioanniskarasoulas@gmail.com" class="btn">Email</a>
         </div>
-        <div class="container " id="c4">
+        <div class="container" id="c4">
             <h3>Find me @</h3>
-            <a class="gitHubIcon" target="_blank" href="https://github.com/KRSLS"><img
+            <a class="gitHubIcon" target="_blank" href="https://github.com/KRSLS">
+                <img
                     src="Assets/Logos/github-mark-white.svg"></a>
         </div>
 

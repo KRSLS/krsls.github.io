@@ -28,6 +28,59 @@ function handleBlur() {
   }
 }
 
+var viewDesigns = false;
+var viewProjects = false;
+
+function openDesigns() {
+  viewDesigns = !viewDesigns;
+  console.log(`View designs: ${viewDesigns}`);
+
+  const designs = document.getElementsByClassName("design");
+  var sectionDesign = document.getElementById("sectionDesign");
+
+  if (viewDesigns) {
+    sectionDesign.classList.add("sectionNameActive");
+    for (let i = 0; i < designs.length; i++) {
+      designs[i].style.display = 'flex';
+    }
+  }
+  else {
+    sectionDesign.classList.remove("sectionNameActive");
+    for (let i = 0; i < designs.length; i++) {
+      designs[i].style.display = 'none';
+    }
+  }
+}
+
+function openProjects() {
+  viewProjects = !viewProjects;
+  console.log(`View projects: ${viewProjects}`);
+
+  const projects = document.getElementsByClassName("project");
+  var sectionProject = document.getElementById("sectionProject");
+
+  if (viewProjects) {
+    sectionProject.classList.add("sectionNameActive");
+    for (let i = 0; i < projects.length; i++) {
+      projects[i].style.display = 'flex';
+    }
+  }
+  else {
+    sectionProject.classList.remove("sectionNameActive");
+    for (let i = 0; i < projects.length; i++) {
+      projects[i].style.display = 'none';
+    }
+  }
+}
+
+function seeKiip() {
+  if(!viewProjects)
+    {
+      openProjects();
+      scrollToID("latestProject");
+    }
+}
+
 // run code every 100ms
 setInterval(() => {
   // console.log("Blur value: " + blurAmount);

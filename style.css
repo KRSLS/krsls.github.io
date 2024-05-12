@@ -243,11 +243,57 @@ main {
     border: none;
 }
 
-.sectionname {
-    width: 80%;
+.container a img {
+    border: none;
 }
 
-.sectionName h3{
+.sectionName {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    width: 80%;
+    transition: .3s ease;
+}
+
+.sectionName p {
+    font-size: 1rem;
+    color: grey;
+}
+
+.sectionName:hover {
+    color: #1c1c1c;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.sectionNameActive {
+    color: #1c1c1c;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.sectionName svg {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    width: 2rem;
+    border: 1px solid red;
+    display: block;
+    transition: .4s ease;
+}
+
+.sectionName svg:hover {
+    transform: rotate(180deg);
+}
+
+.design {
+    display: none;
+}
+
+.project {
+    display: none;
+}
+
+.sectionName h3 {
     font-size: 1.2rem;
     font-weight: 500;
 }
