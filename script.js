@@ -30,7 +30,7 @@ function handleBlur() {
 
 // run code every 100ms
 setInterval(() => {
-  console.log("Blur value: " + blurAmount);
+  // console.log("Blur value: " + blurAmount);
 
   // apply the style
   document.getElementById("darkModeIcon").style.filter =
