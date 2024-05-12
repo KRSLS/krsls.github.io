@@ -240,6 +240,10 @@ main {
     box-shadow: var(--shadow);
 }
 
+.noborder img {
+    border: none;
+}
+
 .sectionname {
     width: 80%;
 }
