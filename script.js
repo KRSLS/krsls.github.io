@@ -1,86 +1,67 @@
+var viewProject = 0;
+
+function navigateProject(index) {
+    //gather all the elements by class name
+    const navProjects = document.getElementsByClassName("navProject");
+    const projects = document.getElementsByClassName("project");
+
+    //set viewing project index
+    viewProject = index;
+
+    //add 'active' effect (class) to clicked nav button
+    for (let i = 0; i < navProjects.length; i++) {
+        if (i !== index) {
+            navProjects[i].classList.remove('navActiveText');
+        }
+        else {
+            navProjects[i].classList.add('navActiveText');
+        }
+    }
+
+    //show / hide projects based on index
+    for (let i = 0; i < projects.length; i++) {
+        if (i !== index) {
+            projects[i].classList.remove("projectShow");
+        }
+        else {
+            projects[i].classList.add("projectShow");
+        }
+    }
+
+    //debug current viewing project
+    console.log(`Viewing project: ${index}`);
+}
+
+//on window load
+window.addEventListener("load", (e) => {
+    //get footer doc
+    var footer = document.getElementById("footer");
+    //create a new date (now)
+    const d = new Date();
+    //save the current date year
+    let year = d.getFullYear();
+    //change footer to current year
+    footer.innerHTML = `Copyright © KRSLS - ${year}`;
+});
+
 function scrollToID(id) {
     document.getElementById(id).scrollIntoView();
 }
 
-var showBio = true;
+var enableZoom = false;
+var zoom = false;
+function enlargeImage(id) {
+    if (enableZoom) {
+        if (window.window.innerWidth > 675) {
+            zoom = !zoom;
 
-function showLatestProject() {
-
-    if (showBio) {
-        document.getElementById("bio").style.display = "none";
-        document.getElementById("latestproject").style.display = "block";
-    }
-    else if (!showBio) {
-        document.getElementById("bio").style.display = "flex";
-        document.getElementById("latestproject").style.display = "none";
-    }
-
-    showBio = !showBio;
-}
-
-function sendEmail() {
-    var subject = document.getElementById("emailSubject").value;
-    var body = document.getElementById("emailBody").value;
-
-    if (subject === '' || body === '') {
-        // alert('You need to enter a name & subject.')
-        document.getElementById("emailError").style.display = "block";
-
-        //After 3 seconds run a function
-        //This function hides the error notification
-        setTimeout(closeNotification, 3000);
-
-    }
-    else if (subject != null && body != null) {
-        window.location = 'mailto:ioanniskarasoulas@gmail.com?subject=' + subject + '&body=' + body;
-    }
-}
-
-function closeNotification() {
-    document.getElementById("emailError").style.display = "none";
-}
-
-var projectIndex = 0;
-var projects = [
-    p1 = document.getElementById("p1"),
-    p2 = document.getElementById("p2"),
-    p3 = document.getElementById("p3"),
-    p4 = document.getElementById("p4"),
-]
-
-function switchProject(where) {
-
-    if (where === 1) {
-        if (projectIndex < projects.length - 1) {
-            projectIndex++;
-        }
-        else projectIndex = 0;
-
-        console.log('Switched to project ' + projectIndex);
-
-        for (let index = 0; index < projects.length; index++) {
-            if (index === projectIndex) {
-                projects[index].style.display = "block";
+            if (zoom) {
+                // document.getElementById(id).style.transform = `scale(1.5)`;
+                document.getElementById(id).classList.add('imageEnlarge');
             }
-            else if (index !== projectIndex) {
-                projects[index].style.display = "none";
-            }
-        }
-    }
-    else if (where === -1) {
-        if (projectIndex > 0) {
-            projectIndex--;
-        }
-        else projectIndex = projects.length - 1;
-
-        console.log('Switched to project ' + projectIndex);
-
-        for (let index = 0; index < projects.length; index++) {
-            if (index === projectIndex) {
-                projects[index].style.display = "block";
-            }
-            else if (index !== projectIndex) {
-                projects[index].style.display = "none";
+            else {
+                // document.getElementById(id).style.transform = `scale(1)`;
+                document.getElementById(id).classList.remove('imageEnlarge');
             }
         }
     }
