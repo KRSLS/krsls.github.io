@@ -81,17 +81,17 @@ function seeKiip() {
     }
 }
 
-// run code every 100ms
-setInterval(() => {
-  // console.log("Blur value: " + blurAmount);
+// // run code every 100ms
+// setInterval(() => {
+//   // console.log("Blur value: " + blurAmount);
 
-  // apply the style
-  document.getElementById("darkModeIcon").style.filter =
-    "blur(" + blurAmount + "px)";
+//   // apply the style
+//   document.getElementById("darkModeIcon").style.filter =
+//     "blur(" + blurAmount + "px)";
 
-  // look up for this :(
-  handleBlur();
-}, 100);
+//   // look up for this :(
+//   handleBlur();
+// }, 100);
 
 function turnDarkMode() {
   // enable dark-mode css at the body
@@ -102,12 +102,12 @@ window.addEventListener("scroll", () => {
   // console.log(window.scrollY);
 
   // animated dark mode icon with scroll position ;)
-  document.getElementById("darkModeIcon").style.transform =
-    "rotate(" + scrollY * scaleCoff + "deg)";
-  // add blur as long as the blur value is lower than 4
-  if (blurAmount < maxBlurAmount) {
-    blurAmount += scrollY * blurCoff;
-  }
+  // document.getElementById("darkModeIcon").style.transform =
+  //   "rotate(" + scrollY * scaleCoff + "deg)";
+  // // add blur as long as the blur value is lower than 4
+  // if (blurAmount < maxBlurAmount) {
+  //   blurAmount += scrollY * blurCoff;
+  // }
 
   // if scroll is greater than then show fixed navbar
   if (window.scrollY > 125) {
@@ -116,17 +116,17 @@ window.addEventListener("scroll", () => {
     document.getElementById("navMobile").style.display = "none";
   }
 
-  // save scroll value and adjust to smaller number
-  var rotValue = scrollY * 0.04;
-  // if scroll value is smaller than then rotate image
-  if (rotValue < 0) {
-    rotValue = 0;
-  }
-  if (rotValue < 30) {
-    // change the rotation of the document
-    document.getElementById("kiipMobile").style.transform =
-      "rotate(" + rotValue + "deg)";
-  }
+  // // save scroll value and adjust to smaller number
+  // var rotValue = scrollY * 0.04;
+  // // if scroll value is smaller than then rotate image
+  // if (rotValue < 0) {
+  //   rotValue = 0;
+  // }
+  // if (rotValue < 30) {
+  //   // change the rotation of the document
+  //   document.getElementById("kiipMobile").style.transform =
+  //     "rotate(" + rotValue + "deg)";
+  // }
 
   // as we scroll then lower the opacity to document
   var opacity = 1;

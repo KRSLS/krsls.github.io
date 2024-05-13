@@ -252,8 +252,13 @@ main {
     flex-direction: column;
     cursor: pointer;
     padding: 1rem 2rem;
-    width: 80%;
+    width: 98%;
     transition: .3s ease;
+}
+
+.smallText h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .sectionName p {
@@ -354,9 +359,16 @@ main {
 }
 
 .gitHubIcon {
+    display: flex;
     box-shadow: var(--shadow);
     transition: 0.3s ease;
     animation: transitionIn 3s ease 1;
+}
+
+.gitHubIcon img {
+    margin: auto;
+    text-align: center;
+    width: 80%;
 }
 
 .gitHubIcon:hover {
