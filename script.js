@@ -1,20 +1,95 @@
+var darkMode = false;
+
+function switchMode() {
+    clearNavigation();
+
+    var body = document.getElementById('body');
+    var navBar = document.getElementById('navBar');
+    var hero = document.getElementById('hero');
+    var btn = document.getElementById('btn');
+    var btnS = document.getElementsByClassName('btn-s');
+    var navigation = document.getElementsByClassName('navigation');
+    var project = document.getElementsByClassName('project');
+    var projectInfo = document.getElementsByClassName('projectInfo');
+
+    var about = document.getElementById('about');
+    var footer = document.getElementById('footer');
+
+    darkMode = !darkMode;
+
+    if (darkMode) {
+        document.getElementById('darkModeBTN').innerHTML = 'Dark';
+        body.classList.add('bodyBright')
+        navBar.classList.add('navBright');
+        hero.classList.add('heroBright');
+        btn.classList.add('btnBright');
+        for (let i = 0; i < btnS.length; i++) {
+            btnS[i].classList.add('btn-sBright');
+        }
+        for (let i = 0; i < navigation.length; i++) {
+            navigation[i].classList.add('navigationBright');
+        }
+        for (let i = 0; i < project.length; i++) {
+            project[i].classList.add('projectBright');
+        }
+        for (let i = 0; i < projectInfo.length; i++) {
+            projectInfo[i].classList.add('projectInfoBright');
+        }
+        about.classList.add('aboutBright');
+        footer.classList.add('footerBright');
+    }
+    else {
+        document.getElementById('darkModeBTN').innerHTML = 'Bright';
+        body.classList.remove('bodyBright')
+        navBar.classList.remove('navBright');
+        hero.classList.remove('heroBright');
+        btn.classList.remove('btnBright');
+        for (let i = 0; i < btnS.length; i++) {
+            btnS[i].classList.remove('btn-sBright');
+        }
+        for (let i = 0; i < navigation.length; i++) {
+            navigation[i].classList.remove('navigationBright');
+        }
+        for (let i = 0; i < project.length; i++) {
+            project[i].classList.remove('projectBright');
+        }
+        for (let i = 0; i < projectInfo.length; i++) {
+            projectInfo[i].classList.remove('projectInfoBright');
+        }
+        about.classList.remove('aboutBright');
+        footer.classList.remove('footerBright');
+    }
+}
+
 var viewProject = 0;
 
 function navigateProject(index) {
     //gather all the elements by class name
-    const navProjects = document.getElementsByClassName("navProject");
-    const projects = document.getElementsByClassName("project");
+    var navProjects = document.getElementsByClassName("navProject");
+    var projects = document.getElementsByClassName("project");
 
     //set viewing project index
     viewProject = index;
 
     //add 'active' effect (class) to clicked nav button
-    for (let i = 0; i < navProjects.length; i++) {
-        if (i !== index) {
-            navProjects[i].classList.remove('navActiveText');
+    if (!darkMode) {
+        for (let i = 0; i < navProjects.length; i++) {
+            if (i !== index) {
+                navProjects[i].classList.remove('navActiveText');
+            }
+            else {
+                navProjects[i].classList.add('navActiveText');
+            }
         }
-        else {
-            navProjects[i].classList.add('navActiveText');
+    }
+    else {
+        for (let i = 0; i < navProjects.length; i++) {
+            if (i !== index) {
+                navProjects[i].classList.remove('navActiveTextBright');
+            }
+            else {
+                navProjects[i].classList.add('navActiveTextBright');
+            }
         }
     }
 
@@ -30,6 +105,24 @@ function navigateProject(index) {
 
     //debug current viewing project
     console.log(`Viewing project: ${index}`);
+}
+
+function clearNavigation() {
+    viewProject = 9;
+    var navProjects = document.getElementsByClassName("navProject");
+    var projects = document.getElementsByClassName("project");
+
+    for (let i = 0; i < navProjects.length; i++) {
+        navProjects[i].classList.remove('navActiveText');
+    }
+    for (let i = 0; i < navProjects.length; i++) {
+        navProjects[i].classList.remove('navActiveTextBright');
+    }
+    for (let i = 0; i < projects.length; i++) {
+        projects[i].classList.remove("projectShow");
+    }
+
+    console.log(navProjects[0]);
 }
 
 //on window load

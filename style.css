@@ -11,6 +11,28 @@
     scroll-behavior: smooth;
 }
 
+/* Scroll Bar */
+
+/* ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--d-background);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: var(--d-text);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+} */
+
+/* End Scroll Bar */
+
 :root {
     --d-background: #09090b;
     --background: #fafafa;
@@ -23,8 +45,12 @@
 body {
     color: var(--d-text);
     background-color: var(--d-background);
-    scroll-behavior: smooth;
-    transition: 1s ease;
+    transition: 0.2s;
+}
+
+.bodyBright {
+    color: var(--d-text);
+    background-color: var(--background);
 }
 
 /* Nav Bar */
@@ -36,7 +62,7 @@ nav {
 }
 
 nav a {
-    margin: 2rem;
+    margin: 2rem 1rem;
     color: var(--o-text);
     text-decoration: none;
     transition: 0.2s;
@@ -44,6 +70,14 @@ nav a {
 
 nav a:hover {
     color: var(--d-text);
+}
+
+.navBright a {
+    color: var(--text);
+}
+
+.navBright a:hover {
+    color: var(--o-text);
 }
 
 /* End Nav Bar */
@@ -56,6 +90,14 @@ nav a:hover {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+
+.heroBright h1 {
+    color: var(--text);
+}
+
+.heroBright p {
+    color: var(--text)
 }
 
 .hero .title {
@@ -98,6 +140,15 @@ nav a:hover {
     background-color: rgba(255, 255, 255, 0.9);
 }
 
+.btnBright {
+    color: var(--d-text);
+    background-color: var(--d-background);
+}
+
+.btnBright:hover {
+    background-color: rgb(66, 66, 66);
+}
+
 .btn-s {
     cursor: pointer;
     color: var(--d-text);
@@ -114,6 +165,16 @@ nav a:hover {
 .btn-s:hover {
     background-color: var(--border);
     border: 1px solid transparent;
+}
+
+.btn-sBright {
+    color: var(--text);
+    background: transparent;
+    border: 1px solid var(--o-text);
+}
+
+.btn-sBright:hover {
+    background: var(--o-text);
 }
 
 /* End Generic */
@@ -144,9 +205,28 @@ nav a:hover {
     color: var(--d-text);
 }
 
+.navigationBright a {
+    color: var(--text);
+}
+
+.navigationBright a:hover {
+    color: rgb(141, 141, 141);
+    ;
+}
+
+.navigationBright h1 {
+    color: var(--text);
+}
+
 .navActiveText {
     color: var(--d-text) !important;
     background-color: var(--border);
+    border-radius: 20px;
+}
+
+.navActiveTextBright {
+    color: var(--d-text) !important;
+    background-color: black;
     border-radius: 20px;
 }
 
@@ -159,6 +239,10 @@ nav a:hover {
     /* height: 800px; */
     border-radius: 10px;
     animation: fadeIn .5s ease 1 forwards;
+}
+
+.projectBright {
+    border: 1px solid var(--o-text);
 }
 
 @keyframes fadeIn {
@@ -193,6 +277,10 @@ nav a:hover {
     border-radius: 5px;
 }
 
+.projectInfoBright {
+    color: var(--text);
+}
+
 .projectInfo div {
     margin: auto;
 }
@@ -202,6 +290,7 @@ nav a:hover {
     width: 10rem;
     margin: auto;
     border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
 }
 
 .projectInfo iframe {
@@ -261,6 +350,10 @@ nav a:hover {
     text-align: center;
 }
 
+.aboutBright {
+    color: var(--text);
+}
+
 /* End About Section*/
 
 /* Footer */
@@ -274,12 +367,16 @@ footer {
     background-color: var(--d-background);
 }
 
+.footerBright {
+    color: var(--text);
+    background-color: var(--background);
+}
+
 /* End Footer */
 
 /* Media Query */
 
-@media (max-width: 975px) 
-{
+@media (max-width: 975px) {
     .imageSlider img {
         width: 30%;
     }
@@ -298,7 +395,7 @@ footer {
     .imageSlider img {
         width: 100%;
     }
-    
+
 }
 
 @media (max-width: 475px) {

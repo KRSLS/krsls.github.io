@@ -1,53 +1,55 @@
 <html lang="en">
 
 <head>
+    <meta name="color-scheme" content="light dark" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KRSLS</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="body">
 
     <!-- Nav Bar -->
-    <nav>
+    <nav id="navBar">
         <a href="#" onclick="scrollToID('about');">About</a>
         <a href="https://github.com/krsls" target="_blank">GitHub</a>
+        <a href="#" onclick="clearNavigation(); switchMode()" id="darkModeBTN">Bright</a>
     </nav>
 
     <!-- Hero -->
-    <section class="hero">
+    <section class="hero" id="hero">
         <h1 class="title">Ioannis Karasoulas</h1>
         <p class="description">Self taught developer & designer. Started from watching tutorials on YouTube and now
             creating native multi platform cloud based apps.</p>
         <div class="btn-container">
-            <a onclick="navigateProject(0); scrollToID('projects');" class="btn">Latest Project</a>
-            <a href="https://github.com/krsls" target="_blank" class="btn-s">GitHub</a>
+            <a onclick="navigateProject(0); scrollToID('projects');" class="btn" id="btn">Latest Project</a>
+            <a href="https://github.com/krsls" target="_blank" class="btn-s" id="btn-s">GitHub</a>
         </div>
     </section>
 
     <!-- Projects -->
     <section class="projects" id="projects">
-        <div class="navigation">
+        <div class="navigation" id="navigation">
             <h1>Web</h1>
             <a onclick="navigateProject(0)" class="navProject">Dynamic</a>
             <a onclick="navigateProject(1)" class="navProject">Parallax</a>
 
         </div>
-        <div class="navigation">
+        <div class="navigation" id="navigation">
             <h1>Flutter</h1>
             <a onclick="navigateProject(2)" class="navProject">Kiip</a>
             <a onclick="navigateProject(3)" class="navProject">Amanager</a>
         </div>
-        <div class="navigation">
+        <div class="navigation" id="navigation">
             <h1>Unity</h1>
             <a onclick="navigateProject(4)" class="navProject">Peiodic Table(t)</a>
             <a onclick="navigateProject(5)" class="navProject">Off Limits</a>
         </div>
 
         <!-- Dynamic Landing Page -->
-        <div class="project">
-            <div class="projectInfo" style="flex-direction: column;">
+        <div class="project" id="project">
+            <div class="projectInfo" id="projectInfo" style="flex-direction: column;">
                 <div>
                     <h3 class="title">Dynamic Landing Page</h3>
                     <p class="date">- 2024</p>
@@ -56,8 +58,8 @@
                     <p class="description">Interactive smooth animations, controlled scrolling...impress more!
                     </p>
                     <div class="btn-container">
-                        <a href="https://github.com/KRSLS/DynamicLandingPage" target="_blank" class="btn-s">GitHub</a>
-                        <a href="https://krsls.github.io/DynamicLandingPage/" target="_blank" class="btn-s">Demo</a>
+                        <a href="https://github.com/KRSLS/DynamicLandingPage" target="_blank" class="btn-s" id="btn-s">GitHub</a>
+                        <a href="https://krsls.github.io/DynamicLandingPage/" target="_blank" class="btn-s" id="btn-s">Demo</a>
                     </div>
                 </div>
                 <iframe src="https://krsls.github.io/DynamicLandingPage" onclick="self.scrollTo(0.0, 0.0);"
@@ -66,8 +68,8 @@
         </div>
 
         <!-- Parallax Landing Page -->
-        <div class="project">
-            <div class="projectInfo" style="flex-direction: column;">
+        <div class="project" id="project">
+            <div class="projectInfo" id="projectInfo" style="flex-direction: column;">
                 <div>
                     <h3 class="title">Parallax Landing Page</h3>
                     <p class="date">- 2024</p>
@@ -76,8 +78,8 @@
                     <p class="description">Use it for different elements on your page to give a better feel.
                     </p>
                     <div class="btn-container">
-                        <a href="https://github.com/KRSLS/ParallaxLandingPage" target="_blank" class="btn-s">GitHub</a>
-                        <a href="https://krsls.github.io/ParallaxLandingPage/" target="_blank" class="btn-s">Demo</a>
+                        <a href="https://github.com/KRSLS/ParallaxLandingPage" target="_blank" class="btn-s" id="btn-s">GitHub</a>
+                        <a href="https://krsls.github.io/ParallaxLandingPage/" target="_blank" class="btn-s" id="btn-s">Demo</a>
                     </div>
                 </div>
                 <iframe src="https://krsls.github.io/ParallaxLandingPage" onclick="self.scrollTo(0.0, 0.0);"
@@ -86,8 +88,8 @@
         </div>
 
         <!-- Kiip -->
-        <div class="project">
-            <div class="projectInfo">
+        <div class="project" id="project">
+            <div class="projectInfo" id="projectInfo">
                 <img src="Assets/projectIcons/Kiip.webp">
                 <div>
                     <h3 class="title">Kiip - Note Manager</h3>
@@ -99,22 +101,25 @@
                         and smooth animations.
                     </p>
                     <div class="btn-container">
-                        <a href="https://kiip-cc44e.web.app/" target="_blank" class="btn-s">Web</a>
+                        <a href="https://kiip-cc44e.web.app/" target="_blank" class="btn-s" id="btn-s">Web</a>
                         <a href="https://play.google.com/store/apps/details?id=com.codelined.kiip" target="_blank"
-                            class="btn-s">Android</a>
+                            class="btn-s" id="btn-s">Android</a>
                     </div>
                 </div>
             </div>
             <div class="imageSlider">
-                <img onclick="enlargeImage('kiipImage01')" src="Assets/projectPresentation/kiip/kiip01.webp" id="kiipImage01">
-                <img onclick="enlargeImage('kiipImage02')" src="Assets/projectPresentation/kiip/kiip02.webp" id="kiipImage02">
-                <img onclick="enlargeImage('kiipImage03')" src="Assets/projectPresentation/kiip/kiip03.webp" id="kiipImage03">
+                <img onclick="enlargeImage('kiipImage01')" src="Assets/projectPresentation/kiip/kiip01.webp"
+                    id="kiipImage01">
+                <img onclick="enlargeImage('kiipImage02')" src="Assets/projectPresentation/kiip/kiip02.webp"
+                    id="kiipImage02">
+                <img onclick="enlargeImage('kiipImage03')" src="Assets/projectPresentation/kiip/kiip03.webp"
+                    id="kiipImage03">
             </div>
         </div>
 
         <!-- AManager -->
-        <div class="project">
-            <div class="projectInfo">
+        <div class="project" id="project">
+            <div class="projectInfo" id="projectInfo">
                 <img src="Assets/projectIcons/AManager.webp">
                 <div>
                     <h3 class="title">AManager - Account Manager</h3>
@@ -125,24 +130,29 @@
                         customization. Made with Flutter & Firebase.
                     </p>
                     <div class="btn-container">
-                        <a href="https://amanager-d70c6.web.app/" target="_blank" class="btn-s">Web</a>
+                        <a href="https://amanager-d70c6.web.app/" target="_blank" class="btn-s" id="btn-s">Web</a>
                         <a href="https://play.google.com/store/apps/details?id=com.highnd.amanager&hl=en&gl=US"
-                            target="_blank" class="btn-s">Android</a>
+                            target="_blank" class="btn-s" id="btn-s">Android</a>
                     </div>
                 </div>
             </div>
             <div class="imageSlider">
-                <img onclick="enlargeImage('amanager01')" src="Assets/projectPresentation/amanager/amanager01.webp" id="amanager01">
-                <img onclick="enlargeImage('amanager02')" src="Assets/projectPresentation/amanager/amanager02.webp" id="amanager02">
-                <img onclick="enlargeImage('amanager03')" src="Assets/projectPresentation/amanager/amanager03.webp" id="amanager03">
-                <img onclick="enlargeImage('amanager04')" src="Assets/projectPresentation/amanager/amanager04.webp" id="amanager04">
-                <img onclick="enlargeImage('amanager05')" src="Assets/projectPresentation/amanager/amanager05.webp" id="amanager05">
+                <img onclick="enlargeImage('amanager01')" src="Assets/projectPresentation/amanager/amanager01.webp"
+                    id="amanager01">
+                <img onclick="enlargeImage('amanager02')" src="Assets/projectPresentation/amanager/amanager02.webp"
+                    id="amanager02">
+                <img onclick="enlargeImage('amanager03')" src="Assets/projectPresentation/amanager/amanager03.webp"
+                    id="amanager03">
+                <img onclick="enlargeImage('amanager04')" src="Assets/projectPresentation/amanager/amanager04.webp"
+                    id="amanager04">
+                <img onclick="enlargeImage('amanager05')" src="Assets/projectPresentation/amanager/amanager05.webp"
+                    id="amanager05">
             </div>
         </div>
 
         <!-- Periodic Tablet(t) -->
-        <div class="project">
-            <div class="projectInfo">
+        <div class="project" id="project">
+            <div class="projectInfo" id="projectInfo">
                 <img src="Assets/projectIcons/PedioticTable(t).png-160webp">
                 <div>
                     <h3 class="title">Periodic Table(t) - Game (Quiz)</h3>
@@ -154,20 +164,23 @@
                     </p>
                     <div class="btn-container">
                         <a href="https://apkpure.com/periodic-table-t/com.highnd.asimellis" target="_blank"
-                            class="btn-s">Android</a>
+                            class="btn-s" id="btn-s">Android</a>
                     </div>
                 </div>
             </div>
             <div class="imageSlider">
-                <img onclick="enlargeImage('periodictablet01')" src="Assets/projectPresentation/periodic_tablet/periodic_tablet01.webp" id="periodictablet01">
-                <img onclick="enlargeImage('periodictablet02')" src="Assets/projectPresentation/periodic_tablet/periodic_tablet02.webp" id="periodictablet02">
-                <img onclick="enlargeImage('periodictablet03')" src="Assets/projectPresentation/periodic_tablet/periodic_tablet03.webp" id="periodictablet03">
+                <img onclick="enlargeImage('periodictablet01')"
+                    src="Assets/projectPresentation/periodic_tablet/periodic_tablet01.webp" id="periodictablet01">
+                <img onclick="enlargeImage('periodictablet02')"
+                    src="Assets/projectPresentation/periodic_tablet/periodic_tablet02.webp" id="periodictablet02">
+                <img onclick="enlargeImage('periodictablet03')"
+                    src="Assets/projectPresentation/periodic_tablet/periodic_tablet03.webp" id="periodictablet03">
             </div>
         </div>
 
         <!-- Off Limits -->
-        <div class="project">
-            <div class="projectInfo">
+        <div class="project" id="project">
+            <div class="projectInfo" id="projectInfo">
                 <img src="Assets/projectIcons/OffLimits.webp">
                 <div>
                     <h3 class="title">Off Limits - Game</h3>
@@ -179,14 +192,17 @@
                     </p>
                     <div class="btn-container">
                         <a href="https://apkpure.com/off-limits/com.highnd.offlimits/download/4" target="_blank"
-                            class="btn-s">Android</a>
+                            class="btn-s" id="btn-s">Android</a>
                     </div>
                 </div>
             </div>
             <div class="imageSlider">
-                <img onclick="enlargeImage('offlimits01')" src="Assets/projectPresentation/off_limits/off_limits01.webp" id="offlimits01">
-                <img onclick="enlargeImage('offlimits02')" src="Assets/projectPresentation/off_limits/off_limits02.webp" id="offlimits02">
-                <img onclick="enlargeImage('offlimits03')" src="Assets/projectPresentation/off_limits/off_limits03.webp" id="offlimits03">
+                <img onclick="enlargeImage('offlimits01')" src="Assets/projectPresentation/off_limits/off_limits01.webp"
+                    id="offlimits01">
+                <img onclick="enlargeImage('offlimits02')" src="Assets/projectPresentation/off_limits/off_limits02.webp"
+                    id="offlimits02">
+                <img onclick="enlargeImage('offlimits03')" src="Assets/projectPresentation/off_limits/off_limits03.webp"
+                    id="offlimits03">
             </div>
         </div>
     </section>
