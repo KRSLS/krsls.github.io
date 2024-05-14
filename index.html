@@ -10,11 +10,19 @@
 
 <body id="body">
 
+    <!-- Snack Bar -->
+    <div class="snackbar" id="snackbar">
+        <div class="container">
+            <h2 class="snackbarTitle" id="snackbarTitle">Site opened in backgronud.</h2>
+            <a class="btn-s" onclick="closeSnackbar()">CLOSE</a>
+        </div>
+    </div>
+
     <!-- Nav Bar -->
     <nav id="navBar">
         <a href="#" onclick="scrollToID('about');">About</a>
         <a href="https://github.com/krsls" target="_blank">GitHub</a>
-        <a href="#" onclick="clearNavigation(); switchMode()" id="darkModeBTN">Bright</a>
+        <a href="#" onclick="clearNavigation(); switchMode(); showSnackBar('Brightness mode switched.');" id="darkModeBTN">Bright</a>
     </nav>
 
     <!-- Hero -->
@@ -45,6 +53,10 @@
             <h1>Unity</h1>
             <a onclick="navigateProject(4)" class="navProject">Peiodic Table(t)</a>
             <a onclick="navigateProject(5)" class="navProject">Off Limits</a>
+        </div>
+        <div class="navigation" id="navigation">
+            <h1>Career</h1>
+            <a onclick="navigateProject(6)" class="navProject">METRO</a>
         </div>
 
         <!-- Dynamic Landing Page -->

@@ -1,9 +1,30 @@
+var enableSnackbar = false;
+function showSnackBar(text) {
+    if (enableSnackbar) {
+        var snackBar = document.getElementById('snackbar');
+        var snackbarTitle = document.getElementById('snackbarTitle');
+
+        snackbarTitle.innerHTML = text;
+        snackBar.style.display = 'block';
+    }
+}
+
+function closeSnackbar() {
+    if(enableSnackbar)
+        {
+            var snackBar = document.getElementById('snackbar');
+
+    snackBar.style.display = 'none';
+        }
+}
+
 var darkMode = false;
 
 function switchMode() {
     clearNavigation();
 
     var body = document.getElementById('body');
+    var snackBarTitle = document.getElementById('snackbarTitle');
     var navBar = document.getElementById('navBar');
     var hero = document.getElementById('hero');
     var btn = document.getElementById('btn');
@@ -21,6 +42,7 @@ function switchMode() {
         document.getElementById('darkModeBTN').innerHTML = 'Dark';
         body.classList.add('bodyBright')
         navBar.classList.add('navBright');
+        snackbarTitle.classList.add('snackbarTitleBright');
         hero.classList.add('heroBright');
         btn.classList.add('btnBright');
         for (let i = 0; i < btnS.length; i++) {
@@ -41,6 +63,7 @@ function switchMode() {
     else {
         document.getElementById('darkModeBTN').innerHTML = 'Bright';
         body.classList.remove('bodyBright')
+        snackbarTitle.classList.remove('snackbarTitleBright');
         navBar.classList.remove('navBright');
         hero.classList.remove('heroBright');
         btn.classList.remove('btnBright');

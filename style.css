@@ -53,6 +53,69 @@ body {
     background-color: var(--background);
 }
 
+/* Snack Bar */
+
+.snackbar {
+    display: none;
+    position: fixed;
+    padding: 0.5rem 0.5rem;
+    bottom: 0px;
+    width: 100%;
+    /* background-color: #75ff98; */
+    background-color: rgba(92, 92, 92, 0.2);
+    backdrop-filter: blur(20px);
+    z-index: 1;
+    animation: snackbar 0.3s ease 1 forwards;
+}
+
+.snackbar .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.snackbar .snackbarTitle {
+    color: var(--d-text);
+    margin: 0.5rem;
+    align-self: center;
+    font-size: 18px;
+}
+
+.snackbar .snackbarTitleBright {
+    color: var(--text);
+}
+
+.snackbar .btnSnackbar {
+    align-self: center;
+    margin: 0.5rem;
+    cursor: pointer;
+    color: var(--d-text);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: .5rem 1rem;
+    color: var(--d-text);
+    background: var(--d-background);
+    border-radius: 6px;
+}
+
+.snackbar .btnSnackbar:hover {
+    background-color: rgb(37, 37, 37);
+}
+
+@keyframes snackbar {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* EndSnack Bar */
+
 /* Nav Bar */
 
 nav {
