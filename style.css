@@ -121,6 +121,7 @@ nav a:hover {
     margin: 1rem 0rem;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
