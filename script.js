@@ -64,47 +64,56 @@ function switchMode() {
 var viewProject = 0;
 
 function navigateProject(index) {
-    //gather all the elements by class name
-    var navProjects = document.getElementsByClassName("navProject");
-    var projects = document.getElementsByClassName("project");
 
-    //set viewing project index
-    viewProject = index;
+    //if the project clicked is different than do switch
+    if (index !== viewProject) {
+        //gather all the elements by class name
+        var navProjects = document.getElementsByClassName("navProject");
+        var projects = document.getElementsByClassName("project");
 
-    //add 'active' effect (class) to clicked nav button
-    if (!darkMode) {
-        for (let i = 0; i < navProjects.length; i++) {
-            if (i !== index) {
-                navProjects[i].classList.remove('navActiveText');
-            }
-            else {
-                navProjects[i].classList.add('navActiveText');
-            }
-        }
-    }
-    else {
-        for (let i = 0; i < navProjects.length; i++) {
-            if (i !== index) {
-                navProjects[i].classList.remove('navActiveTextBright');
-            }
-            else {
-                navProjects[i].classList.add('navActiveTextBright');
-            }
-        }
-    }
+        //set viewing project index
+        viewProject = index;
 
-    //show / hide projects based on index
-    for (let i = 0; i < projects.length; i++) {
-        if (i !== index) {
-            projects[i].classList.remove("projectShow");
+        //add 'active' effect (class) to clicked nav button
+        if (!darkMode) {
+            for (let i = 0; i < navProjects.length; i++) {
+                if (i !== index) {
+                    navProjects[i].classList.remove('navActiveText');
+                }
+                else {
+                    navProjects[i].classList.add('navActiveText');
+                }
+            }
         }
         else {
-            projects[i].classList.add("projectShow");
+            for (let i = 0; i < navProjects.length; i++) {
+                if (i !== index) {
+                    navProjects[i].classList.remove('navActiveTextBright');
+                }
+                else {
+                    navProjects[i].classList.add('navActiveTextBright');
+                }
+            }
         }
+
+        //show / hide projects based on index
+        for (let i = 0; i < projects.length; i++) {
+            if (i !== index) {
+                projects[i].classList.remove("projectShow");
+            }
+            else {
+                projects[i].classList.add("projectShow");
+            }
+        }
+
+        //debug current viewing project
+        console.log(`Viewing project: ${index}`);
+    }
+    //if the index is the same then clear navigation(close view)
+    else {
+        clearNavigation();
     }
 
-    //debug current viewing project
-    console.log(`Viewing project: ${index}`);
 }
 
 function clearNavigation() {
