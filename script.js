@@ -84,7 +84,12 @@ function switchMode() {
     }
 }
 
-var viewProject = 0;
+//set viewing project to 99 for the first load
+//this will fix the double click issue when setting 
+//this value to 0 or 1
+//if we set this to 0 or 1 it will auto select the project 0 or 1
+//and we will need to double click the button to view the project
+var viewProject = 99;
 
 function navigateProject(index) {
 
