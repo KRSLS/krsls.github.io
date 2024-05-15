@@ -429,6 +429,7 @@ footer {
     color: var(--d-text);
     text-align: center;
     background-color: var(--d-background);
+    transition: 0.2s;
 }
 
 .footerBright {
