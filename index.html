@@ -37,50 +37,35 @@
         </div>
     </section>
 
-    <!-- Projects -->
+    <!-- Projects / Career Navigation -->
     <section class="projects" id="projects">
         <div class="navigation" id="navigation">
             <h1>Web</h1>
-            <a onclick="navigateProject(0)" class="navProject">Dynamic</a>
-            <a onclick="navigateProject(1)" class="navProject">Parallax</a>
+            <a onclick="navigateProject(0)" class="navProject">Parallax</a>
+            <a onclick="navigateProject(1)" class="navProject">Dynamic</a>
 
         </div>
         <div class="navigation" id="navigation">
             <h1>Flutter</h1>
-            <a onclick="navigateProject(2)" class="navProject">Kiip</a>
-            <a onclick="navigateProject(3)" class="navProject">Amanager</a>
+            <a onclick="navigateProject(2)" class="navProject">AManager</a>
+            <a onclick="navigateProject(3)" class="navProject">Kiip</a>
         </div>
         <div class="navigation" id="navigation">
             <h1>Unity</h1>
-            <a onclick="navigateProject(4)" class="navProject">Peiodic Table(t)</a>
-            <a onclick="navigateProject(5)" class="navProject">Off Limits</a>
+            <a onclick="navigateProject(4)" class="navProject">Off Limits</a>
+            <a onclick="navigateProject(5)" class="navProject">Peiodic Table(t)</a>
         </div>
         <div class="navigation" id="navigation">
             <h1>Career</h1>
             <a onclick="navigateProject(6)" class="navProject">METRO</a>
         </div>
-
-        <!-- Dynamic Landing Page -->
-        <div class="project" id="project">
-            <div class="projectInfo" id="projectInfo" style="flex-direction: column;">
-                <div>
-                    <h3 class="title">Dynamic Landing Page</h3>
-                    <p class="date">- 2024</p>
-                    <p class="description">A design to provide better landing page experience.
-                    </p>
-                    <p class="description">Interactive smooth animations, controlled scrolling...impress more!
-                    </p>
-                    <div class="btn-container">
-                        <a href="https://github.com/KRSLS/DynamicLandingPage" target="_blank" class="btn-s"
-                            id="btn-s">GitHub</a>
-                        <a href="https://krsls.github.io/DynamicLandingPage/" target="_blank" class="btn-s"
-                            id="btn-s">Demo</a>
-                    </div>
-                </div>
-                <iframe src="https://krsls.github.io/DynamicLandingPage" onclick="self.scrollTo(0.0, 0.0);"
-                    frameBorder="0"></iframe>
-            </div>
+        <div class="navigation" id="navigation">
+            <h1>Education</h1>
+            <a onclick="navigateProject(7)" class="navProject">Vocational High School</a>
+            <a onclick="navigateProject(8)" class="navProject">State IEK</a>
         </div>
+
+        <!-- Projects need to be incremented with navigation buttons -->
 
         <!-- Parallax Landing Page -->
         <div class="project" id="project">
@@ -104,33 +89,27 @@
             </div>
         </div>
 
-        <!-- Kiip -->
+        <!-- Dynamic Landing Page -->
         <div class="project" id="project">
-            <div class="projectInfo" id="projectInfo">
-                <img src="Assets/projectIcons/Kiip.webp">
+            <div class="projectInfo" id="projectInfo" style="flex-direction: column;">
                 <div>
-                    <h3 class="title">Kiip - Note Manager</h3>
-                    <p class="date">- 2023</p>
-                    <p class="description">Simple cloud based note taking app made with love, Flutter and
-                        Firebase.
+                    <h3 class="title">Dynamic Landing Page</h3>
+                    <p class="date">- 2024</p>
+                    <p class="description">A design to provide better landing page experience.
                     </p>
-                    <p class="description">Featuring account creation, collections (notebooks), Material You design
-                        and smooth animations.
+                    <p class="description">Interactive smooth animations, controlled scrolling...impress more!
+                    </p>
+                    <p class="description"><b>Live preview might not work correctly</b>.
                     </p>
                     <div class="btn-container">
-                        <a href="https://kiip-cc44e.web.app/" target="_blank" class="btn-s" id="btn-s">Web</a>
-                        <a href="https://play.google.com/store/apps/details?id=com.codelined.kiip" target="_blank"
-                            class="btn-s" id="btn-s">Android</a>
+                        <a href="https://github.com/KRSLS/DynamicLandingPage" target="_blank" class="btn-s"
+                            id="btn-s">GitHub</a>
+                        <a href="https://krsls.github.io/DynamicLandingPage/" target="_blank" class="btn-s"
+                            id="btn-s">Demo</a>
                     </div>
                 </div>
-            </div>
-            <div class="imageSlider">
-                <img onclick="enlargeImage('kiipImage01')" src="Assets/projectPresentation/kiip/kiip01.webp"
-                    id="kiipImage01">
-                <img onclick="enlargeImage('kiipImage02')" src="Assets/projectPresentation/kiip/kiip02.webp"
-                    id="kiipImage02">
-                <img onclick="enlargeImage('kiipImage03')" src="Assets/projectPresentation/kiip/kiip03.webp"
-                    id="kiipImage03">
+                <iframe src="https://krsls.github.io/DynamicLandingPage" onclick="self.scrollTo(0.0, 0.0);"
+                    frameBorder="0"></iframe>
             </div>
         </div>
 
@@ -169,31 +148,33 @@
             </div>
         </div>
 
-        <!-- Periodic Tablet(t) -->
+        <!-- Kiip -->
         <div class="project" id="project">
             <div class="projectInfo" id="projectInfo">
-                <img src="Assets/projectIcons/PedioticTable(t).png-160webp">
+                <img src="Assets/projectIcons/Kiip.webp">
                 <div>
-                    <h3 class="title">Periodic Table(t) - Game (Quiz)</h3>
-                    <p class="date">- 2019</p>
-                    <p class="description">In collab with the Union of Greek Chemists created this quiz type game.
+                    <h3 class="title">Kiip - Note Manager</h3>
+                    <p class="date">- 2023</p>
+                    <p class="description">Simple cloud based note taking app made with love, Flutter and
+                        Firebase.
                     </p>
-                    <p class="description">A set of questions you need to answer in a limited time to win rewards, made
-                        with Unity.
+                    <p class="description">Featuring account creation, collections (notebooks), Material You design
+                        and smooth animations.
                     </p>
                     <div class="btn-container">
-                        <a href="https://apkpure.com/periodic-table-t/com.highnd.asimellis" target="_blank"
+                        <a href="https://kiip-cc44e.web.app/" target="_blank" class="btn-s" id="btn-s">Web</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.codelined.kiip" target="_blank"
                             class="btn-s" id="btn-s">Android</a>
                     </div>
                 </div>
             </div>
             <div class="imageSlider">
-                <img onclick="enlargeImage('periodictablet01')"
-                    src="Assets/projectPresentation/periodic_tablet/periodic_tablet01.webp" id="periodictablet01">
-                <img onclick="enlargeImage('periodictablet02')"
-                    src="Assets/projectPresentation/periodic_tablet/periodic_tablet02.webp" id="periodictablet02">
-                <img onclick="enlargeImage('periodictablet03')"
-                    src="Assets/projectPresentation/periodic_tablet/periodic_tablet03.webp" id="periodictablet03">
+                <img onclick="enlargeImage('kiipImage01')" src="Assets/projectPresentation/kiip/kiip01.webp"
+                    id="kiipImage01">
+                <img onclick="enlargeImage('kiipImage02')" src="Assets/projectPresentation/kiip/kiip02.webp"
+                    id="kiipImage02">
+                <img onclick="enlargeImage('kiipImage03')" src="Assets/projectPresentation/kiip/kiip03.webp"
+                    id="kiipImage03">
             </div>
         </div>
 
@@ -224,13 +205,91 @@
                     id="offlimits03">
             </div>
         </div>
+
+        <!-- Periodic Tablet(t) -->
+        <div class="project" id="project">
+            <div class="projectInfo" id="projectInfo">
+                <img src="Assets/projectIcons/PedioticTable(t).png-160webp">
+                <div>
+                    <h3 class="title">Periodic Table(t) - Game (Quiz)</h3>
+                    <p class="date">- 2019</p>
+                    <p class="description">In collab with the Union of Greek Chemists created this quiz type game.
+                    </p>
+                    <p class="description">A set of questions you need to answer in a limited time to win rewards, made
+                        with Unity.
+                    </p>
+                    <div class="btn-container">
+                        <a href="https://apkpure.com/periodic-table-t/com.highnd.asimellis" target="_blank"
+                            class="btn-s" id="btn-s">Android</a>
+                    </div>
+                </div>
+            </div>
+            <div class="imageSlider">
+                <img onclick="enlargeImage('periodictablet01')"
+                    src="Assets/projectPresentation/periodic_tablet/periodic_tablet01.webp" id="periodictablet01">
+                <img onclick="enlargeImage('periodictablet02')"
+                    src="Assets/projectPresentation/periodic_tablet/periodic_tablet02.webp" id="periodictablet02">
+                <img onclick="enlargeImage('periodictablet03')"
+                    src="Assets/projectPresentation/periodic_tablet/periodic_tablet03.webp" id="periodictablet03">
+            </div>
+        </div>
+
+        <!-- Career METRO -->
+        <div class="project" id="project">
+            <div class="projectInfo" id="projectInfo" style="flex-direction: column;">
+                <div>
+                    <h3 class="title">METRO AEBE - IT Help Desk</h3>
+                    <p class="date">- 2021 | Present</p>
+                    <p class="description">First contact with colleagues where there is a problem, question or search
+                        for guidance.
+                    </p>
+                    <p class="description">Responsible for analyzing, troubleshooting and evaluating technology issues.
+                        Giving instructions to customers on how to use business-specific program.
+                    </p>
+                    <p class="description">In communication with external partners to solve problems with Viva,
+                        Vodafone, CardLink, Active, MobileTechnologies etc.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education Vocational High School -->
+        <div class="project" id="project">
+            <div class="projectInfo" id="projectInfo" style="flex-direction: column;">
+                <div>
+                    <h3 class="title">Vocational High School - Developer</h3>
+                    <p class="date">- TBA</p>
+                    <p class="description">First contact with coding.</p>
+                    <p class="description">While we were doing some super basic stuff with HTML, i was already googling
+                        how to create a nav bar.</p>
+                    <p class="description">Learned HTML, CSS and Python.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education State IEK -->
+        <div class="project" id="project">
+            <div class="projectInfo" id="projectInfo" style="flex-direction: column;">
+                <div>
+                    <h3 class="title">State IEK - Developer</h3>
+                    <p class="date">- TBA</p>
+                    <p class="description">At this point i was already pretty advanced since i was already creating apps
+                        on my own.
+                    </p>
+                    <p class="description">We pretty much learned everything: C, C++, C#, Python, Web, SQL, Android
+                        Studio (Java), OpenGL, Blender, Photoshop and more.
+                    </p>
+                    <p class="description">Final Projects TBA</p>
+                </div>
+            </div>
+        </div>
+
     </section>
 
     <!-- About -->
 
     <section class="about" id="about">
         <h2>Inspired by shadcn.</h2>
-        <p>This design is inpsired by shadcn, i tried to recreate it without any framework.</p>
+        <p>This design is inpsired by shadcn, i tried to recreate it without a framework.</p>
     </section>
 
     <footer id="footer">Copyright © KRSLS - 2024</footer>
