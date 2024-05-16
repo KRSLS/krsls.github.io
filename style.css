@@ -418,6 +418,12 @@ nav a:hover {
     color: var(--d-text);
     border-radius: 10px;
     border: 0.5px solid var(--border);
+    transition: 0.5s cubic-bezier(0.05, 1, 0.1, 1);
+}
+
+.about .card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 80px rgba(0, 0, 0, 0.4);
 }
 
 .cardC1 {
@@ -436,6 +442,11 @@ nav a:hover {
     margin-top: 4rem;
     text-align: center;
     font-size: 48px;
+    color: var(--d-text);
+}
+
+.aboutTitleBright {
+    color: var(--text);
 }
 
 .about .card h1 {

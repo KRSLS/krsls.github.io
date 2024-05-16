@@ -10,12 +10,11 @@ function showSnackBar(text) {
 }
 
 function closeSnackbar() {
-    if(enableSnackbar)
-        {
-            var snackBar = document.getElementById('snackbar');
+    if (enableSnackbar) {
+        var snackBar = document.getElementById('snackbar');
 
-    snackBar.style.display = 'none';
-        }
+        snackBar.style.display = 'none';
+    }
 }
 
 var darkMode = false;
@@ -33,6 +32,7 @@ function switchMode() {
     var project = document.getElementsByClassName('project');
     var projectInfo = document.getElementsByClassName('projectInfo');
 
+    var aboutTitle = document.getElementById('aboutTitle');
     var inspiration = document.getElementById('inspiration');
     var footer = document.getElementById('footer');
 
@@ -57,6 +57,7 @@ function switchMode() {
         for (let i = 0; i < projectInfo.length; i++) {
             projectInfo[i].classList.add('projectInfoBright');
         }
+        aboutTitle.classList.add('aboutTitleBright');
         inspiration.classList.add('inspirationBright');
         footer.classList.add('footerBright');
     }
@@ -79,6 +80,7 @@ function switchMode() {
         for (let i = 0; i < projectInfo.length; i++) {
             projectInfo[i].classList.remove('projectInfoBright');
         }
+        aboutTitle.classList.remove('aboutTitleBright');
         inspiration.classList.remove('inspirationBright');
         footer.classList.remove('footerBright');
     }
