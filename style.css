@@ -45,7 +45,7 @@
 body {
     color: var(--d-text);
     background-color: var(--d-background);
-    transition: 0.2s;
+    transition: 1s cubic-bezier(0.05, 1, 0.1, 1);
 }
 
 .bodyBright {
@@ -128,7 +128,6 @@ nav a {
     margin: 2rem 1rem;
     color: var(--o-text);
     text-decoration: none;
-    transition: 0.2s;
 }
 
 nav a:hover {
@@ -198,6 +197,7 @@ nav a:hover {
     color: var(--text);
     background: var(--background);
     border-radius: 6px;
+    transition: 1s cubic-bezier(0.05, 1, 0.1, 1);
 }
 
 .btn:hover {
@@ -262,7 +262,8 @@ nav a:hover {
     color: var(--o-text);
     float: left;
     padding: .4rem .8rem;
-    transition: 0.2s;
+    transition: 1s cubic-bezier(0.05, 1, 0.1, 1);
+    border-radius: 20px;
 }
 
 .navigation a:hover {
@@ -284,13 +285,13 @@ nav a:hover {
 .navActiveText {
     color: var(--d-text) !important;
     background-color: var(--border);
-    border-radius: 20px;
+    transform: scale(1.1);
 }
 
 .navActiveTextBright {
     color: var(--d-text) !important;
     background-color: black;
-    border-radius: 20px;
+    transform: scale(1.1);
 }
 
 .project {
@@ -385,7 +386,7 @@ nav a:hover {
     cursor: zoom-in;
     border-radius: 5px;
     width: 20%;
-    transition: .3s;
+    transition: 1s cubic-bezier(0.05, 1, 0.1, 1);
 }
 
 .imageEnlarge {
@@ -441,7 +442,7 @@ nav a:hover {
 .aboutTitle {
     margin-top: 4rem;
     text-align: center;
-    font-size: 48px;
+    font-size: 42px;
     color: var(--d-text);
 }
 
@@ -494,7 +495,7 @@ footer {
     color: var(--d-text);
     text-align: center;
     background-color: var(--d-background);
-    transition: 0.2s;
+    transition: 1s cubic-bezier(0.05, 1, 0.1, 1);
 }
 
 .footerBright {
