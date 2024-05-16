@@ -33,7 +33,7 @@ function switchMode() {
     var project = document.getElementsByClassName('project');
     var projectInfo = document.getElementsByClassName('projectInfo');
 
-    var about = document.getElementById('about');
+    var inspiration = document.getElementById('inspiration');
     var footer = document.getElementById('footer');
 
     darkMode = !darkMode;
@@ -57,7 +57,7 @@ function switchMode() {
         for (let i = 0; i < projectInfo.length; i++) {
             projectInfo[i].classList.add('projectInfoBright');
         }
-        about.classList.add('aboutBright');
+        inspiration.classList.add('inspirationBright');
         footer.classList.add('footerBright');
     }
     else {
@@ -79,7 +79,7 @@ function switchMode() {
         for (let i = 0; i < projectInfo.length; i++) {
             projectInfo[i].classList.remove('projectInfoBright');
         }
-        about.classList.remove('aboutBright');
+        inspiration.classList.remove('inspirationBright');
         footer.classList.remove('footerBright');
     }
 }

@@ -275,7 +275,6 @@ nav a:hover {
 
 .navigationBright a:hover {
     color: rgb(141, 141, 141);
-    ;
 }
 
 .navigationBright h1 {
@@ -404,6 +403,59 @@ nav a:hover {
 /* About Section */
 
 .about {
+    margin: auto;
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-evenly;
+    padding: 1rem 1rem;
+    width: 90%;
+}
+
+.about .card {
+    padding: 1rem;
+    color: var(--d-text);
+    border-radius: 10px;
+    border: 0.5px solid var(--border);
+}
+
+.cardC1 {
+    background: linear-gradient(90deg, rgb(108, 199, 112) 0%, rgb(105, 197, 133) 100%);
+}
+
+.cardC2 {
+    background: linear-gradient(90deg, rgb(107, 158, 192) 0%, rgb(110, 118, 192) 100%);
+}
+
+.cardC3 {
+    background: linear-gradient(90deg, rgb(168, 98, 141) 0%, rgb(202, 105, 105) 100%);
+}
+
+.aboutTitle {
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 48px;
+}
+
+.about .card h1 {
+    font-size: 32px;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.about .card p {
+    padding: 1rem;
+    font-size: 18px;
+    max-width: 400px;
+}
+
+/* End About Section */
+
+/* inspiration Section */
+
+.inspiration {
     width: 80%;
     margin: auto;
     padding: 6rem 0px;
@@ -414,11 +466,11 @@ nav a:hover {
     text-align: center;
 }
 
-.aboutBright {
+.inspirationBright {
     color: var(--text);
 }
 
-/* End About Section*/
+/* End inspiration Section*/
 
 /* Footer */
 
