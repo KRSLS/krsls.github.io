@@ -32,7 +32,7 @@
         <p class="description">Self taught developer & designer. Started from watching tutorials on YouTube and now
             creating native multi platform cloud based apps.</p>
         <div class="btn-container">
-            <a onclick="clearNavigation(); navigateProject(0); scrollToID('projects');" class="btn" id="btn">Latest
+            <a onclick="clearNavigation(); navigateProject(4); scrollToID('projects');" class="btn" id="btn">Latest
                 Project</a>
             <a href="https://github.com/krsls" target="_blank" class="btn-s" id="btn-s">GitHub</a>
         </div>
@@ -49,20 +49,21 @@
             <h1>Flutter</h1>
             <a onclick="navigateProject(2)" class="navProject">AManager</a>
             <a onclick="navigateProject(3)" class="navProject">Kiip</a>
+            <a onclick="navigateProject(4)" class="navProject">KRadio</a>
         </div>
         <div class="navigation" id="navigation">
             <h1>Unity</h1>
-            <a onclick="navigateProject(4)" class="navProject">Off Limits</a>
-            <a onclick="navigateProject(5)" class="navProject">Periodic Table(t)</a>
+            <a onclick="navigateProject(5)" class="navProject">Off Limits</a>
+            <a onclick="navigateProject(6)" class="navProject">Periodic Table(t)</a>
         </div>
         <div class="navigation" id="navigation">
             <h1>Career</h1>
-            <a onclick="navigateProject(6)" class="navProject">METRO</a>
+            <a onclick="navigateProject(7)" class="navProject">METRO</a>
         </div>
         <div class="navigation" id="navigation">
             <h1>Education</h1>
-            <a onclick="navigateProject(7)" class="navProject">Vocational High School</a>
-            <a onclick="navigateProject(8)" class="navProject">State IEK</a>
+            <a onclick="navigateProject(8)" class="navProject">Vocational High School</a>
+            <a onclick="navigateProject(9)" class="navProject">State IEK</a>
         </div>
 
         <!-- Projects need to be incremented with navigation buttons -->
@@ -175,6 +176,35 @@
                     id="kiipImage02">
                 <img onclick="enlargeImage('kiipImage03')" src="Assets/projectPresentation/kiip/kiip03.webp"
                     id="kiipImage03">
+            </div>
+        </div>
+
+        <!-- KRadio -->
+        <div class="project" id="project">
+            <div class="projectInfo" id="projectInfo">
+                <img src="Assets/projectIcons/kradio.jpg">
+                <div>
+                    <h3 class="title">KRadio - Radio Player</h3>
+                    <p class="date">- 2024</p>
+                    <p class="description">Work in progres radio player.
+                    </p>
+                    <p class="description">Icon, images and almost everything are subject to change.
+                    </p>
+                    <p class="description">Streaming music from url and display icy text, xml parsing for the
+                        information about the next song and some cool visuals like song cover and blur, we love blur.
+                    </p>
+                    <div class="btn-container">
+                        <a href="https://github.com/KRSLS/kradio" target="_blank" class="btn-s" id="btn-s">GitHub</a>
+                        <!-- <a href="https://play.google.com/store/apps/details?id=com.codelined.kiip" target="_blank"
+                            class="btn-s" id="btn-s">Android</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="imageSlider">
+                <img onclick="enlargeImage('kradioImage01')" src="Assets/projectPresentation/kradio/kradio_01.png"
+                    id="kradioImage01">
+                <img onclick="enlargeImage('kradioImage02')" src="Assets/projectPresentation/kradio/kradio_02.png"
+                    id="kradioImage02">
             </div>
         </div>
 
